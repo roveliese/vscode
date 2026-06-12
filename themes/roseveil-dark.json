@@ -609,9 +609,7 @@
             "foreground": "#ebc88d",
             "fontStyle": "italic"
         },
-        "enumMember": {
-            "foreground": "#cdd6f4"
-        },
+        "enumMember": "#f8c762",
         "variable.constant": {
             "foreground": "#82d2ce"
         },
@@ -693,7 +691,47 @@
         "function.defaultLibrary": "#82d2ce",
         "method.defaultLibrary": "#82d2ce",
         "variable.readonly": "#82d2ce",
-        "typeParameter": "#efb080"
+        "typeParameter": "#82d2ce",
+        "variable.mutable": {
+            "foreground": "#cdd6f4",
+            "fontStyle": "underline"
+        },
+        "variable.mutable.declaration": {
+            "foreground": "#cdd6f4",
+            "fontStyle": "underline"
+        },
+        "parameter.mutable": {
+            "foreground": "#d6d6dd",
+            "fontStyle": "underline"
+        },
+        "selfKeyword": "#efb080",
+        "selfKeyword.mutable": {
+            "foreground": "#efb080",
+            "fontStyle": "underline"
+        },
+        "lifetime": {
+            "foreground": "#f8c762",
+            "fontStyle": "italic"
+        },
+        "builtinType": "#82d2ce",
+        "formatSpecifier": "#ebc88d",
+        "operator.unsafe": "#cc7c8a",
+        "function.unsafe": {
+            "foreground": "#efb080",
+            "fontStyle": "italic"
+        },
+        "method.unsafe": {
+            "foreground": "#efb080",
+            "fontStyle": "italic"
+        },
+        "namespace:go": "#cdd6f4",
+        "type.declaration:go": "#87c3ff",
+        "function.declaration:go": "#efb080",
+        "method.declaration:go": "#efb080",
+        "variable.readonly:go": "#82d2ce",
+        "annotation": "#a8cc7c",
+        "annotation.declaration": "#a8cc7c",
+        "annotationMember": "#efb080"
     },
     "tokenColors": [
         {
@@ -2197,6 +2235,333 @@
             }
         },
         {
+            "name": "YAML: Keys",
+            "scope": "entity.name.tag.yaml",
+            "settings": {
+                "foreground": "#82d2ce"
+            }
+        },
+        {
+            "name": "YAML: Strings",
+            "scope": [
+                "string.quoted.double.yaml",
+                "string.quoted.single.yaml"
+            ],
+            "settings": {
+                "foreground": "#e394dc"
+            }
+        },
+        {
+            "name": "YAML: Numbers",
+            "scope": "constant.numeric.yaml",
+            "settings": {
+                "foreground": "#ebc88d"
+            }
+        },
+        {
+            "name": "YAML: Constants",
+            "scope": "constant.language.boolean.yaml",
+            "settings": {
+                "foreground": "#f8c762"
+            }
+        },
+        {
+            "name": "YAML: Null",
+            "scope": "constant.language.null.yaml",
+            "settings": {
+                "foreground": "#f8c762"
+            }
+        },
+        {
+            "name": "YAML: Anchors",
+            "scope": [
+                "entity.name.other.anchor.yaml",
+                "variable.other.alias.yaml"
+            ],
+            "settings": {
+                "foreground": "#aaa0fa"
+            }
+        },
+        {
+            "name": "YAML: Comments",
+            "scope": "comment.line.number-sign.yaml",
+            "settings": {
+                "foreground": "#e4e4e45e",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "TOML: Keys",
+            "scope": "entity.other.attribute-name.toml",
+            "settings": {
+                "foreground": "#82d2ce"
+            }
+        },
+        {
+            "name": "TOML: Tables",
+            "scope": "entity.name.section.table.toml",
+            "settings": {
+                "foreground": "#87c3ff"
+            }
+        },
+        {
+            "name": "TOML: Strings",
+            "scope": [
+                "string.quoted.double.toml",
+                "string.quoted.single.toml",
+                "string.quoted.multiline.toml"
+            ],
+            "settings": {
+                "foreground": "#e394dc"
+            }
+        },
+        {
+            "name": "TOML: Numbers",
+            "scope": [
+                "constant.numeric.integer.toml",
+                "constant.numeric.float.toml"
+            ],
+            "settings": {
+                "foreground": "#ebc88d"
+            }
+        },
+        {
+            "name": "TOML: Booleans",
+            "scope": "constant.language.boolean.toml",
+            "settings": {
+                "foreground": "#f8c762"
+            }
+        },
+        {
+            "name": "TOML: Dates",
+            "scope": "constant.other.datetime.toml",
+            "settings": {
+                "foreground": "#ebc88d"
+            }
+        },
+        {
+            "name": "TOML: Comments",
+            "scope": "comment.line.number-sign.toml",
+            "settings": {
+                "foreground": "#e4e4e45e",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Dockerfile: Instructions",
+            "scope": "keyword.other.special-method.dockerfile",
+            "settings": {
+                "foreground": "#82d2ce"
+            }
+        },
+        {
+            "name": "Dockerfile: FROM",
+            "scope": "keyword.other.from.dockerfile",
+            "settings": {
+                "foreground": "#82d2ce"
+            }
+        },
+        {
+            "name": "Dockerfile: Tag",
+            "scope": "entity.name.image.dockerfile",
+            "settings": {
+                "foreground": "#87c3ff"
+            }
+        },
+        {
+            "name": "Dockerfile: String",
+            "scope": [
+                "string.quoted.double.dockerfile",
+                "string.quoted.single.dockerfile"
+            ],
+            "settings": {
+                "foreground": "#e394dc"
+            }
+        },
+        {
+            "name": "Dockerfile: Variables",
+            "scope": "variable.other.dockerfile",
+            "settings": {
+                "foreground": "#aaa0fa"
+            }
+        },
+        {
+            "name": "Dockerfile: Comments",
+            "scope": "comment.line.number-sign.dockerfile",
+            "settings": {
+                "foreground": "#e4e4e45e",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "SQL: Keywords",
+            "scope": [
+                "keyword.other.sql",
+                "keyword.other.DML.sql",
+                "keyword.other.DDL.create.sql",
+                "keyword.other.DDL.sql",
+                "keyword.other.alias.sql",
+                "keyword.other.order.sql",
+                "keyword.other.authorization.sql",
+                "storage.modifier.sql"
+            ],
+            "settings": {
+                "foreground": "#82d2ce"
+            }
+        },
+        {
+            "name": "SQL: Functions",
+            "scope": [
+                "support.function.aggregate.sql",
+                "support.function.string.sql",
+                "support.function.math.sql",
+                "entity.name.function.sql"
+            ],
+            "settings": {
+                "foreground": "#efb080"
+            }
+        },
+        {
+            "name": "SQL: Types",
+            "scope": [
+                "storage.type.sql",
+                "support.type.sql"
+            ],
+            "settings": {
+                "foreground": "#87c3ff"
+            }
+        },
+        {
+            "name": "SQL: Strings",
+            "scope": "string.quoted.single.sql",
+            "settings": {
+                "foreground": "#e394dc"
+            }
+        },
+        {
+            "name": "SQL: Numbers",
+            "scope": "constant.numeric.sql",
+            "settings": {
+                "foreground": "#ebc88d"
+            }
+        },
+        {
+            "name": "SQL: Table / Column Names",
+            "scope": [
+                "entity.name.table.sql",
+                "meta.columns.sql"
+            ],
+            "settings": {
+                "foreground": "#cdd6f4"
+            }
+        },
+        {
+            "name": "SQL: Operators",
+            "scope": "keyword.operator.comparison.sql",
+            "settings": {
+                "foreground": "#82d2ce"
+            }
+        },
+        {
+            "name": "SQL: Variables",
+            "scope": [
+                "text.variable",
+                "text.bracketed"
+            ],
+            "settings": {
+                "foreground": "#cdd6f4"
+            }
+        },
+        {
+            "name": "SQL: Comments",
+            "scope": [
+                "comment.line.double-dash.sql",
+                "comment.block.sql"
+            ],
+            "settings": {
+                "foreground": "#e4e4e45e",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Shell: Keywords",
+            "scope": [
+                "keyword.control.shell",
+                "keyword.operator.shell"
+            ],
+            "settings": {
+                "foreground": "#82d2ce"
+            }
+        },
+        {
+            "name": "Shell: Builtins",
+            "scope": [
+                "support.function.builtin.shell",
+                "entity.name.function.shell"
+            ],
+            "settings": {
+                "foreground": "#efb080"
+            }
+        },
+        {
+            "name": "Shell: Variables",
+            "scope": [
+                "variable.other.normal.shell",
+                "variable.other.special.shell",
+                "variable.other.positional.shell",
+                "variable.other.bracket.shell"
+            ],
+            "settings": {
+                "foreground": "#aaa0fa"
+            }
+        },
+        {
+            "name": "Shell: Variable Declaration",
+            "scope": "variable.other.assign.shell",
+            "settings": {
+                "foreground": "#cdd6f4"
+            }
+        },
+        {
+            "name": "Shell: Strings",
+            "scope": [
+                "string.quoted.double.shell",
+                "string.quoted.single.shell"
+            ],
+            "settings": {
+                "foreground": "#e394dc"
+            }
+        },
+        {
+            "name": "Shell: Heredoc",
+            "scope": "string.unquoted.heredoc.shell",
+            "settings": {
+                "foreground": "#e394dc"
+            }
+        },
+        {
+            "name": "Shell: Numbers",
+            "scope": "constant.numeric.shell",
+            "settings": {
+                "foreground": "#ebc88d"
+            }
+        },
+        {
+            "name": "Shell: Options / Flags",
+            "scope": "string.other.option.shell",
+            "settings": {
+                "foreground": "#cdd6f4"
+            }
+        },
+        {
+            "name": "Shell: Comments",
+            "scope": "comment.line.number-sign.shell",
+            "settings": {
+                "foreground": "#e4e4e45e",
+                "fontStyle": "italic"
+            }
+        },
+        {
             "name": "Unison: Punctuation",
             "scope": "punctuation.definition.delayed.unison,punctuation.definition.list.begin.unison,punctuation.definition.list.end.unison,punctuation.definition.ability.begin.unison,punctuation.definition.ability.end.unison,punctuation.operator.assignment.as.unison,punctuation.separator.pipe.unison,punctuation.separator.delimiter.unison,punctuation.definition.hash.unison",
             "settings": {
@@ -2387,16 +2752,6 @@
             ],
             "settings": {
                 "foreground": "#82d2ce"
-            }
-        },
-        {
-            "name": "SQL Variables",
-            "scope": [
-                "text.variable",
-                "text.bracketed"
-            ],
-            "settings": {
-                "foreground": "#cdd6f4"
             }
         },
         {

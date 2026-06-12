@@ -2,8 +2,8 @@
     "name":  "roseveil-theme",
     "publisher":  "xloiqa",
     "displayName":  "Roseveil Theme",
-    "description":  "A soft dark VS Code theme with rose-tinted accents and cool contrast.",
-    "version": "2.1.1",
+    "description":  "Atmospheric rose theme for VS Code",
+    "version": "2.2.0",
     "engines":  {
                     "vscode":  "^1.70.0"
                 },
@@ -21,6 +21,11 @@
                                            "label":  "Roseveil Light",
                                            "uiTheme":  "vs-light",
                                            "path":  "./themes/roseveil-light.json"
+                                       },
+                                       {
+                                           "label":  "Roseveil Warm",
+                                           "uiTheme":  "vs-dark",
+                                           "path":  "./themes/roseveil-warm.json"
                                        }
                                    ]
                     },
