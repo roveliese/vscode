@@ -1,5 +1,5 @@
 <h3 align="center">
-    <img src="images/icon.png" width="100" alt="Logo"/><br/>
+    <img src="https://raw.githubusercontent.com/xloiqa/roseveil/main/images/icon.png" width="100" alt="Logo"/><br/>
     <br/>
     Roseveil for <a href="https://code.visualstudio.com">VS Code</a>
     <br/>
@@ -64,19 +64,38 @@ The mascot sets the visual temperature: a white kitsune with rose-pink flame wis
 
 Each variant resolves through its own palette; Light has its own syntax scale, while Dark, Warm, and Storm share token shapes with different palettes underneath.
 
-## Customization
+## Settings
 
-You can override any color using VS Code's built-in `workbench.colorCustomizations` and `editor.tokenColorCustomizations` settings. Changes apply on top of the active variant.
+Roseveil ships a configuration layer that applies on top of the static theme. Open **Settings** (`Ctrl+,`) and search for `roseveil` to find all options.
+
+| Setting | Default | Options |
+|---|---|---|
+| `roseveil.accentColor` | `mauve` | `mauve` `rose` `lavender` `sapphire` `teal` `sky` |
+| `roseveil.workbenchMode` | `default` | `default` `flat` `minimal` |
+| `roseveil.bracketColors` | `monochromatic` | `monochromatic` `dimmed` `rainbow` |
+| `roseveil.italicKeywords` | `false` | boolean |
+| `roseveil.boldKeywords` | `false` | boolean |
+| `roseveil.italicComments` | `true` | boolean |
+
+**Accent color** recolors badges, progress bar, focus indicators, and picker borders across all active variants — without touching button colors (those stay rose).
+
+**Workbench mode** controls chrome layering: `flat` blends the sidebar into the editor background; `minimal` extends that to tabs, activity bar, and status bar.
+
+**Bracket colors**: `dimmed` fades brackets progressively by depth; `rainbow` cycles six palette colors across levels.
+
+All changes apply immediately without reloading.
+
+## Advanced customization
+
+For fine-grained overrides, use VS Code's built-in settings directly. These stack on top of both the static theme and the Roseveil settings layer.
 
 ```jsonc
 {
   "workbench.colorCustomizations": {
     "[Roseveil Storm]": {
-      // Make the focus border more vivid
       "focusBorder": "#c0b0f0"
     },
     "[Roseveil Dark][Roseveil Storm]": {
-      // Apply to multiple variants at once
       "editor.selectionBackground": "#2d3060"
     }
   },
@@ -110,7 +129,7 @@ Roseveil themes the following extensions out of the box:
 Found an issue or have a suggestion? Open an issue on [GitHub](https://github.com/xloiqa/roseveil/issues) or reach out via the Marketplace Q&A.
 
 <p align="center">
-<img src="images/footer.png" width="600" alt=""/>
+<img src="https://raw.githubusercontent.com/xloiqa/roseveil/main/images/footer.png" width="600" alt=""/>
 </p>
 
 <p align="center">

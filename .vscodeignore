@@ -1,4 +1,7 @@
 cursor-light-color-theme.json
+images/banner.png
+images/preview.png
+images/footer.png
 node_modules/
 src/
 release/
@@ -6,6 +9,7 @@ docs/
 .git/
 .gitignore
 tsconfig.json
+tsconfig.ext.json
 themes/roseveil.json
 *.vsix
 .vscodeignore

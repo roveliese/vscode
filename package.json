@@ -1,40 +1,90 @@
 {
-    "name":  "roseveil-theme",
-    "publisher":  "xloiqa",
-    "displayName":  "Roseveil Theme",
-    "description":  "Atmospheric rose theme for VS Code",
-    "version": "2.3.1",
-    "engines":  {
-                    "vscode":  "^1.70.0"
+    "name": "roseveil-theme",
+    "publisher": "xloiqa",
+    "displayName": "Roseveil Theme",
+    "description": "Atmospheric rose theme for VS Code",
+    "version": "2.4.0",
+    "engines": {
+        "vscode": "^1.70.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "main": "./dist/extension.js",
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Roseveil Dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/roseveil-dark.json"
+            },
+            {
+                "label": "Roseveil Light",
+                "uiTheme": "vs-light",
+                "path": "./themes/roseveil-light.json"
+            },
+            {
+                "label": "Roseveil Warm",
+                "uiTheme": "vs-dark",
+                "path": "./themes/roseveil-warm.json"
+            },
+            {
+                "label": "Roseveil Storm",
+                "uiTheme": "vs-dark",
+                "path": "./themes/roseveil-storm.json"
+            }
+        ],
+        "configuration": {
+            "title": "Roseveil",
+            "properties": {
+                "roseveil.accentColor": {
+                    "type": "string",
+                    "default": "mauve",
+                    "enum": ["mauve", "rose", "lavender", "sapphire", "teal", "sky"],
+                    "description": "Primary accent color for badges, progress bar, and focus indicators."
                 },
-    "categories":  [
-                       "Themes"
-                   ],
-    "contributes":  {
-                        "themes":  [
-                                       {
-                                           "label":  "Roseveil Dark",
-                                           "uiTheme":  "vs-dark",
-                                           "path":  "./themes/roseveil-dark.json"
-                                       },
-                                       {
-                                           "label":  "Roseveil Light",
-                                           "uiTheme":  "vs-light",
-                                           "path":  "./themes/roseveil-light.json"
-                                       },
-                                       {
-                                           "label":  "Roseveil Warm",
-                                           "uiTheme":  "vs-dark",
-                                           "path":  "./themes/roseveil-warm.json"
-                                       },
-                                       {
-                                           "label":  "Roseveil Storm",
-                                           "uiTheme":  "vs-dark",
-                                           "path":  "./themes/roseveil-storm.json"
-                                       }
-                                   ]
-                    },
-    "icon":  "images/icon.png",
+                "roseveil.italicKeywords": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Render keywords in italic."
+                },
+                "roseveil.boldKeywords": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Render keywords in bold."
+                },
+                "roseveil.italicComments": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Render comments in italic (on by default — matches Roseveil baseline)."
+                },
+                "roseveil.workbenchMode": {
+                    "type": "string",
+                    "default": "default",
+                    "enum": ["default", "flat", "minimal"],
+                    "enumDescriptions": [
+                        "Full three-shade chrome: sidebar, tabs, and editor have distinct backgrounds.",
+                        "Reduced contrast: sidebar background matches the editor background.",
+                        "Single-shade: sidebar, tabs, and panels all use the editor background."
+                    ]
+                },
+                "roseveil.bracketColors": {
+                    "type": "string",
+                    "default": "monochromatic",
+                    "enum": ["monochromatic", "dimmed", "rainbow"],
+                    "enumDescriptions": [
+                        "All brackets use the foreground color (current default).",
+                        "Brackets use progressively dimmed shades of the foreground.",
+                        "Six distinct palette colors cycle across bracket depth levels."
+                    ]
+                }
+            }
+        }
+    },
+    "icon": "images/icon.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/xloiqa/roseveil"
@@ -42,12 +92,13 @@
     "scripts": {
         "build": "ts-node src/build.ts",
         "build:check": "tsc --noEmit",
+        "build:ext": "tsc -p tsconfig.ext.json",
         "verify": "ts-node src/verify.ts"
     },
     "devDependencies": {
-        "typescript": "^5.0.0",
         "@types/node": "^20.0.0",
-        "ts-node": "^10.9.0"
+        "@types/vscode": "^1.70.0",
+        "ts-node": "^10.9.0",
+        "typescript": "^5.0.0"
     }
 }
-
