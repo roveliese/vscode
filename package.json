@@ -3,7 +3,7 @@
     "publisher":  "xloiqa",
     "displayName":  "Roseveil Theme",
     "description":  "Atmospheric rose theme for VS Code",
-    "version": "2.2.1",
+    "version": "2.3.0",
     "engines":  {
                     "vscode":  "^1.70.0"
                 },
@@ -26,6 +26,11 @@
                                            "label":  "Roseveil Warm",
                                            "uiTheme":  "vs-dark",
                                            "path":  "./themes/roseveil-warm.json"
+                                       },
+                                       {
+                                           "label":  "Roseveil Storm",
+                                           "uiTheme":  "vs-dark",
+                                           "path":  "./themes/roseveil-storm.json"
                                        }
                                    ]
                     },

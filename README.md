@@ -1,9 +1,25 @@
 <h3 align="center">
     <img src="images/icon.png" width="100" alt="Logo"/><br/>
-    <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+    <br/>
     Roseveil for <a href="https://code.visualstudio.com">VS Code</a>
-    <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+    <br/>
 </h3>
+
+<p align="center">
+  A quiet, atmospheric theme family built around a rose identity.
+</p>
+
+## Variants
+
+Roseveil variants share syntax intent and token architecture, each with its own palette. They should feel related, not interchangeable.
+
+**Dark** — the center of the family: deep purple-black, restrained rose chrome, and icy cyan edges. Quiet, nocturnal, and built for long sessions without turning the editor flat.
+
+**Light** — soft off-white with dark rose structure and cool teal contrast. It keeps the same atmosphere in daylight: calm, legible, and a little reserved.
+
+**Warm** — cocoa shadows, dusty rose surfaces, and a copper-tinted sky. It softens Dark into something slower and more intimate, suited to evening work.
+
+**Storm** — cold steel blue-grey, crisp rose chrome, and electric cyan pressure. Precise and slightly severe, it pulls Dark toward overcast metal while keeping the rose identity sharp.
 
 ## Usage
 
@@ -16,13 +32,18 @@
 
 Download the VSIX from the [latest GitHub release](https://github.com/xloiqa/roseveil/releases). Open the Command Palette and select **Extensions: Install from VSIX...**, then select the file you just downloaded.
 
-After installing, open the Command Palette and select **Preferences: Color Theme**, then choose **Roseveil Dark**, **Roseveil Light**, or **Roseveil Warm**.
+After installing, open the Command Palette and select **Preferences: Color Theme**, then choose your variant:
+
+- **Roseveil Dark**
+- **Roseveil Light**
+- **Roseveil Warm**
+- **Roseveil Storm**
 
 ## Recommended Settings
 
 ```jsonc
 {
-  // Roseveil ships semantic token rules - keep this enabled
+  // Roseveil ships semantic token rules — keep this enabled
   "editor.semanticHighlighting.enabled": true,
   // Prevent VS Code from overriding terminal colors
   "terminal.integrated.minimumContrastRatio": 1,
@@ -37,29 +58,48 @@ After installing, open the Command Palette and select **Preferences: Color Theme
 
 ## Design
 
-Roseveil keeps the editor quiet so your code stays in focus.
-Accents are reserved for meaningful states: active controls, focus rings, selections, and errors.
+Roseveil is built around a quiet editor, a visible rose identity, and accents that appear only when the interface needs to speak: active controls, focus rings, selections, diagnostics, and errors. Syntax stays readable and atmospheric without carrying the brand color everywhere.
 
-**Dark** - deep dark base, rose chrome, cyan contrast. Low-fatigue for long sessions.
+The mascot sets the visual temperature: a white kitsune with rose-pink flame wisps and icy cyan eyes. That contrast informs the palette language across variants: soft rose structure, cool highlights, and restrained surfaces.
 
-**Light** - warm off-white base, dark rose chrome, cool teal contrast. Calm, not clinical.
+Each variant resolves through its own palette; Light has its own syntax scale, while Dark, Warm, and Storm share token shapes with different palettes underneath.
 
-**Warm** - cocoa dark base, dusty rose chrome, copper accents. A warmer sibling for softer evening sessions.
+## Customization
 
-All variants share the same semantic token coverage and rose identity, with colors resolved through each variant's palette.
+You can override any color using VS Code's built-in `workbench.colorCustomizations` and `editor.tokenColorCustomizations` settings. Changes apply on top of the active variant.
+
+```jsonc
+{
+  "workbench.colorCustomizations": {
+    "[Roseveil Storm]": {
+      // Make the focus border more vivid
+      "focusBorder": "#c0b0f0"
+    },
+    "[Roseveil Dark][Roseveil Storm]": {
+      // Apply to multiple variants at once
+      "editor.selectionBackground": "#2d3060"
+    }
+  },
+  "editor.tokenColorCustomizations": {
+    "[Roseveil Dark]": {
+      "comments": "#888899"
+    }
+  }
+}
+```
 
 ## What's Covered
 
 - Editor, tabs, sidebar, panels, status bar, command center
 - Git decorations, diff view, merge editor
-- Terminal ANSI colors
+- Terminal ANSI colors (all 16)
 - Testing and debug UI
 - Syntax highlighting for Python, JS/TS, Rust, Go, C/C++, Java, PHP, CSS, HTML, Markdown, SQL, Shell, YAML, TOML, Dockerfile, and more
 - Semantic tokens: Pylance (Python), Intelephense (PHP), rust-analyzer, gopls, jdtls, C/C++, JS/TS
 
 ## Extension Support
 
-Roseveil themes the following extensions:
+Roseveil themes the following extensions out of the box:
 
 - [ErrorLens](https://github.com/usernamehw/vscode-error-lens)
 - [GitHub Pull Requests and Issues](https://github.com/microsoft/vscode-pull-request-github)

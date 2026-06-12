@@ -5,12 +5,15 @@
         "focusBorder": "#bd8793",
         "foreground": "#141414eb",
         "disabledForeground": "#6e656b",
+        "widget.border": "#e2d9db",
         "widget.shadow": "#f2ecec80",
         "selection.background": "#9d6d8833",
         "descriptionForeground": "#141414eb",
         "errorForeground": "#cf2d56",
         "icon.foreground": "#a05566",
         "sash.hoverBorder": "#e2d9db",
+        "toolbar.hoverBackground": "#cdc4c633",
+        "toolbar.activeBackground": "#cdc4c655",
         "textBlockQuote.background": "#f2ecec",
         "textBlockQuote.border": "#2a2330",
         "textCodeBlock.background": "#f2ecec",
@@ -162,6 +165,9 @@
         "editorHoverWidget.foreground": "#141414eb",
         "editorIndentGuide.activeBackground": "#cdc4c6",
         "editorIndentGuide.background": "#ece4e4",
+        "editorGhostText.foreground": "#7c747980",
+        "editorGhostText.background": "#00000000",
+        "editorGhostText.border": "#00000000",
         "editorInlayHint.foreground": "#cdc4c6",
         "editorInlayHint.background": "#f2ececbf",
         "editorInlayHint.typeForeground": "#6e656b",
@@ -181,6 +187,10 @@
         "editorRuler.foreground": "#cdc4c6",
         "editor.stackFrameHighlightBackground": "#c0853226",
         "editor.focusedStackFrameHighlightBackground": "#1f8a6526",
+        "editorStickyScroll.background": "#f2ecec",
+        "editorStickyScroll.border": "#00000000",
+        "editorStickyScroll.shadow": "#2a233080",
+        "editorStickyScrollGutter.background": "#f2ecec",
         "editorStickyScrollHover.background": "#e6dddd",
         "editorSuggestWidget.background": "#f2ecec",
         "editorSuggestWidget.border": "#cdc4c6",
@@ -238,6 +248,7 @@
         "inputOption.activeBackground": "#cdc4c6",
         "inputOption.activeBorder": "#9d6d88",
         "inputOption.activeForeground": "#141414eb",
+        "inputOption.hoverBackground": "#ece4e466",
         "inputValidation.errorBackground": "#cf2d56",
         "inputValidation.errorBorder": "#2a233033",
         "inputValidation.errorForeground": "#2a2330",
@@ -259,6 +270,10 @@
         "list.inactiveSelectionBackground": "#e8e0e6",
         "list.inactiveSelectionForeground": "#141414eb",
         "list.warningForeground": "#c08532",
+        "list.errorForeground": "#cf2d56",
+        "list.focusHighlightForeground": "#a05566",
+        "list.filterMatchBackground": "#c0853233",
+        "list.filterMatchBorder": "#c0853266",
         "list.treeItemToggleForeground": "#a05566",
         "listFilterWidget.background": "#ece4e4",
         "listFilterWidget.noMatchesOutline": "#cf2d56",
@@ -394,6 +409,8 @@
         "tab.unfocusedActiveBackground": "#f2ecec",
         "tab.unfocusedActiveBorder": "#00000000",
         "tab.unfocusedActiveBorderTop": "#e2d9db",
+        "tab.unfocusedActiveForeground": "#1f1a1c99",
+        "tab.unfocusedInactiveForeground": "#6e656b80",
         "tab.unfocusedInactiveBackground": "#e8e1e1",
         "terminal.background": "#f8f3f3",
         "terminal.foreground": "#141414eb",
@@ -988,14 +1005,14 @@
             "name": "Regular Expressions",
             "scope": "string.regexp",
             "settings": {
-                "foreground": "#141414eb"
+                "foreground": "#b8448b"
             }
         },
         {
             "name": "Escape Characters",
             "scope": "constant.character.escape",
             "settings": {
-                "foreground": "#141414eb"
+                "foreground": "#b3003f"
             }
         },
         {
@@ -1842,7 +1859,8 @@
             "name": "Rust: Lifetime Name",
             "scope": "entity.name.lifetime.rust",
             "settings": {
-                "foreground": "#db704b"
+                "foreground": "#c08532",
+                "fontStyle": "italic"
             }
         },
         {

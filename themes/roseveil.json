@@ -1,16 +1,19 @@
 {
-    "name": "Roseveil",
+    "name": "Roseveil Dark",
     "type": "dark",
     "colors": {
         "focusBorder": "#cba7aa",
         "foreground": "#cdd6f4",
         "disabledForeground": "#a6adc8",
+        "widget.border": "#30304a",
         "widget.shadow": "#18182580",
         "selection.background": "#7c6a8a33",
         "descriptionForeground": "#cdd6f4",
         "errorForeground": "#cc7c8a",
         "icon.foreground": "#f5e0dc",
         "sash.hoverBorder": "#30304a",
+        "toolbar.hoverBackground": "#585b7033",
+        "toolbar.activeBackground": "#585b7055",
         "textBlockQuote.background": "#181825",
         "textBlockQuote.border": "#11111b",
         "textCodeBlock.background": "#181825",
@@ -162,6 +165,9 @@
         "editorHoverWidget.foreground": "#cdd6f4",
         "editorIndentGuide.activeBackground": "#585b70",
         "editorIndentGuide.background": "#45475a",
+        "editorGhostText.foreground": "#7f849c80",
+        "editorGhostText.background": "#00000000",
+        "editorGhostText.border": "#00000000",
         "editorInlayHint.foreground": "#585b70",
         "editorInlayHint.background": "#181825bf",
         "editorInlayHint.typeForeground": "#a6adc8",
@@ -181,6 +187,10 @@
         "editorRuler.foreground": "#585b70",
         "editor.stackFrameHighlightBackground": "#f8c76226",
         "editor.focusedStackFrameHighlightBackground": "#a8cc7c26",
+        "editorStickyScroll.background": "#181825",
+        "editorStickyScroll.border": "#00000000",
+        "editorStickyScroll.shadow": "#11111b80",
+        "editorStickyScrollGutter.background": "#181825",
         "editorStickyScrollHover.background": "#313244",
         "editorSuggestWidget.background": "#181825",
         "editorSuggestWidget.border": "#585b70",
@@ -238,6 +248,7 @@
         "inputOption.activeBackground": "#585b70",
         "inputOption.activeBorder": "#7c6a8a",
         "inputOption.activeForeground": "#cdd6f4",
+        "inputOption.hoverBackground": "#45475a66",
         "inputValidation.errorBackground": "#cc7c8a",
         "inputValidation.errorBorder": "#11111b33",
         "inputValidation.errorForeground": "#11111b",
@@ -259,6 +270,10 @@
         "list.inactiveSelectionBackground": "#1e1e28",
         "list.inactiveSelectionForeground": "#cdd6f4",
         "list.warningForeground": "#f8c762",
+        "list.errorForeground": "#cc7c8a",
+        "list.focusHighlightForeground": "#f5e0dc",
+        "list.filterMatchBackground": "#f8c76233",
+        "list.filterMatchBorder": "#f8c76266",
         "list.treeItemToggleForeground": "#f5e0dc",
         "listFilterWidget.background": "#45475a",
         "listFilterWidget.noMatchesOutline": "#cc7c8a",
@@ -394,6 +409,8 @@
         "tab.unfocusedActiveBackground": "#181825",
         "tab.unfocusedActiveBorder": "#00000000",
         "tab.unfocusedActiveBorderTop": "#30304a",
+        "tab.unfocusedActiveForeground": "#f4e9e899",
+        "tab.unfocusedInactiveForeground": "#a6adc880",
         "tab.unfocusedInactiveBackground": "#0e0e16",
         "terminal.background": "#13131a",
         "terminal.foreground": "#cdd6f4",
@@ -988,14 +1005,14 @@
             "name": "Regular Expressions",
             "scope": "string.regexp",
             "settings": {
-                "foreground": "#cdd6f4"
+                "foreground": "#ebc88d"
             }
         },
         {
             "name": "Escape Characters",
             "scope": "constant.character.escape",
             "settings": {
-                "foreground": "#cdd6f4"
+                "foreground": "#82d2ce"
             }
         },
         {
@@ -1842,7 +1859,8 @@
             "name": "Rust: Lifetime Name",
             "scope": "entity.name.lifetime.rust",
             "settings": {
-                "foreground": "#efb080"
+                "foreground": "#f8c762",
+                "fontStyle": "italic"
             }
         },
         {
