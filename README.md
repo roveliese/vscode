@@ -64,3 +64,15 @@ Roseveil themes the following extensions:
 ## Support
 
 Found an issue or have a suggestion? Open an issue on [GitHub](https://github.com/xloiqa/roseveil/issues) or reach out via the Marketplace Q&A.
+
+<p align="center">
+<img src="images/footer.png" width="600" alt=""/>
+</p>
+
+<p align="center">
+Copyright &copy; 2026-present <a href="https://github.com/xloiqa">xloiqa</a>
+</p>
+
+<p align="center">
+<a href="https://github.com/xloiqa/roseveil/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=f4e9e8&colorA=2b2b44&colorB=c75e7a"/></a>
+</p>
