@@ -1,7 +1,26 @@
-# Roseveil Theme
+<p align="center">
+  <img src="images/banner.png" width="100" /><br/><br/>
+  <b>Roseveil</b> for <a href="https://code.visualstudio.com">VSCode</a>
+</p>
 
-A soft dark VS Code theme built for long coding sessions.
-Dark mocha base · rosewater accents · cool cyan contrast.
+<p align="center">
+  A soft dark theme with rose-tinted accents and cool cyan contrast.
+</p>
+
+---
+
+## Usage
+
+### Preferred method of installation
+
+Install the extension from a Marketplace:
+
+- [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=xloiqa.roseveil-theme)
+- [Open VSX](https://open-vsx.org/extension/xloiqa/roseveil-theme)
+
+### Manual method of installation
+
+Download the VSIX from the [latest GitHub release](https://github.com/xloiqa/roseveil/releases). Open the Command Palette and select **Extensions: Install from VSIX...**, then open the file you just downloaded.
 
 ---
 
@@ -18,20 +37,6 @@ Accents are reserved for meaningful states: active controls, focus rings, select
 
 ---
 
-## Color Identity
-
-| Role | Color |
-|---|---|
-| Editor background | Deep near-black |
-| Primary accent | Rosewater |
-| Cool contrast | Cyan · soft blue |
-| Strings | Muted rose |
-| Functions | Warm amber |
-| Keywords | Soft teal |
-| Errors | Rose red |
-
----
-
 ## What's Covered
 
 - Editor, tabs, sidebar, panels, status bar, command center
@@ -43,15 +48,6 @@ Accents are reserved for meaningful states: active controls, focus rings, select
 
 ---
 
-## Installation
-
-1. Open Extensions in VS Code (`Ctrl+Shift+X`)
-2. Search **Roseveil Theme**
-3. Click Install
-4. Open Command Palette → `Preferences: Color Theme` → select **Roseveil**
-
----
-
 ## Feedback
 
-Found an issue or have a suggestion? Reach out via the Marketplace Q&A.
+Found an issue or have a suggestion? Open an issue on [GitHub](https://github.com/xloiqa/roseveil/issues) or reach out via the Marketplace Q&A.
