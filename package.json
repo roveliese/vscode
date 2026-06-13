@@ -3,7 +3,7 @@
     "publisher": "xloiqa",
     "displayName": "Roseveil Theme",
     "description": "Atmospheric rose theme for VS Code",
-    "version": "2.4.1",
+    "version": "2.5.0",
     "engines": {
         "vscode": "^1.70.0"
     },
@@ -93,7 +93,9 @@
         "build": "ts-node src/build.ts",
         "build:check": "tsc --noEmit",
         "build:ext": "tsc -p tsconfig.ext.json",
-        "verify": "ts-node src/verify.ts"
+        "verify": "ts-node src/verify.ts",
+        "verify:all": "ts-node src/verify-all.ts",
+        "test": "node --require ts-node/register --test src/test/overrides.test.ts"
     },
     "devDependencies": {
         "@types/node": "^20.0.0",
