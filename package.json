@@ -3,7 +3,7 @@
     "publisher": "xloiqa",
     "displayName": "Roseveil Theme",
     "description": "Atmospheric rose theme for VS Code",
-    "version": "2.5.0",
+    "version": "3.0.0",
     "engines": {
         "vscode": "^1.70.0"
     },
@@ -15,6 +15,13 @@
         "onStartupFinished"
     ],
     "contributes": {
+        "productIconThemes": [
+            {
+                "id": "roseveil-product-icons",
+                "label": "Roseveil Product Icons",
+                "path": "./producticons/roseveil-product-icon-theme.json"
+            }
+        ],
         "themes": [
             {
                 "label": "Roseveil Dark",
@@ -43,7 +50,14 @@
                 "roseveil.accentColor": {
                     "type": "string",
                     "default": "mauve",
-                    "enum": ["mauve", "rose", "lavender", "sapphire", "teal", "sky"],
+                    "enum": [
+                        "mauve",
+                        "rose",
+                        "lavender",
+                        "sapphire",
+                        "teal",
+                        "sky"
+                    ],
                     "description": "Primary accent color for badges, progress bar, and focus indicators."
                 },
                 "roseveil.italicKeywords": {
@@ -64,7 +78,11 @@
                 "roseveil.workbenchMode": {
                     "type": "string",
                     "default": "default",
-                    "enum": ["default", "flat", "minimal"],
+                    "enum": [
+                        "default",
+                        "flat",
+                        "minimal"
+                    ],
                     "enumDescriptions": [
                         "Full three-shade chrome: sidebar, tabs, and editor have distinct backgrounds.",
                         "Reduced contrast: sidebar background matches the editor background.",
@@ -74,7 +92,11 @@
                 "roseveil.bracketColors": {
                     "type": "string",
                     "default": "monochromatic",
-                    "enum": ["monochromatic", "dimmed", "rainbow"],
+                    "enum": [
+                        "monochromatic",
+                        "dimmed",
+                        "rainbow"
+                    ],
                     "enumDescriptions": [
                         "All brackets use the foreground color (current default).",
                         "Brackets use progressively dimmed shades of the foreground.",
@@ -91,15 +113,20 @@
     },
     "scripts": {
         "build": "ts-node src/build.ts",
+        "build:product-icons": "ts-node scripts/build-product-icons.ts",
         "build:check": "tsc --noEmit",
         "build:ext": "tsc -p tsconfig.ext.json",
         "verify": "ts-node src/verify.ts",
         "verify:all": "ts-node src/verify-all.ts",
-        "test": "node --require ts-node/register --test src/test/overrides.test.ts"
+        "verify:roles": "ts-node src/verify-roles.ts",
+        "test": "node --require ts-node/register --test src/test/overrides.test.ts src/test/roles.test.ts"
     },
     "devDependencies": {
+        "@tabler/icons": "^3.44.0",
+        "@tabler/icons-webfont": "^3.44.0",
         "@types/node": "^20.0.0",
         "@types/vscode": "^1.70.0",
+        "fantasticon": "^4.1.0",
         "ts-node": "^10.9.0",
         "typescript": "^5.0.0"
     }

@@ -206,7 +206,7 @@
         "editorError.foreground": "#cf2d56",
         "editorError.border": "#00000000",
         "editorError.background": "#00000000",
-        "editorWarning.foreground": "#c08532",
+        "editorWarning.foreground": "#b87e2e",
         "editorWarning.border": "#00000000",
         "editorWarning.background": "#00000000",
         "editorInfo.foreground": "#206595",
@@ -1101,7 +1101,7 @@
             "name": "Diagnostics: Warning",
             "scope": "token.warn-token",
             "settings": {
-                "foreground": "#c08532"
+                "foreground": "#b87e2e"
             }
         },
         {

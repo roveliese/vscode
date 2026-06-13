@@ -39,6 +39,8 @@ After installing, open the Command Palette and select **Preferences: Color Theme
 - **Roseveil Warm**
 - **Roseveil Storm**
 
+The product icon theme is optional and separate from the color theme. To enable it, open the Command Palette and select **Preferences: Product Icon Theme**, then choose **Roseveil Product Icons**.
+
 ## Recommended Settings
 
 ```jsonc
@@ -109,6 +111,7 @@ For fine-grained overrides, use VS Code's built-in settings directly. These stac
 
 ## What's Covered
 
+- Product icons for the Activity Bar, toolbar, panels, and other VS Code UI icons
 - Editor, tabs, sidebar, panels, status bar, command center
 - Git decorations, diff view, merge editor
 - Terminal ANSI colors (all 16)

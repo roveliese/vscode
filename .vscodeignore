@@ -4,7 +4,9 @@ images/preview.png
 images/footer.png
 node_modules/
 src/
+scripts/
 release/
+producticons/_src/
 docs/
 .git/
 .gitignore
