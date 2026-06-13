@@ -170,6 +170,7 @@
         "editorGhostText.background": "#00000000",
         "editorGhostText.border": "#00000000",
         "editorInlayHint.foreground": "#66535a",
+        "editorUnnecessaryCode.opacity": "#ffffffa6",
         "editorInlayHint.background": "#261d1dbf",
         "editorInlayHint.typeForeground": "#ad9291",
         "editorInlayHint.typeBackground": "#261d1dbf",
