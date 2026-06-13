@@ -9,17 +9,31 @@
   A quiet, atmospheric theme family built around a rose identity.
 </p>
 
-## Variants
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xloiqa/roseveil/main/images/preview.webp"/>
+</p>
 
-Roseveil variants share syntax intent and token architecture, each with its own palette. They should feel related, not interchangeable.
+## Previews
 
-**Dark** — the center of the family: deep purple-black, restrained rose chrome, and icy cyan edges. Quiet, nocturnal, and built for long sessions without turning the editor flat.
+<details>
+<summary>Dark</summary>
+<img src="https://raw.githubusercontent.com/xloiqa/roseveil/main/images/preview-dark.webp"/>
+</details>
 
-**Light** — soft off-white with dark rose structure and cool teal contrast. It keeps the same atmosphere in daylight: calm, legible, and a little reserved.
+<details>
+<summary>Light</summary>
+<img src="https://raw.githubusercontent.com/xloiqa/roseveil/main/images/preview-light.webp"/>
+</details>
 
-**Warm** — cocoa shadows, dusty rose surfaces, and a copper-tinted sky. It softens Dark into something slower and more intimate, suited to evening work.
+<details>
+<summary>Warm</summary>
+<img src="https://raw.githubusercontent.com/xloiqa/roseveil/main/images/preview-warm.webp"/>
+</details>
 
-**Storm** — cold steel blue-grey, crisp rose chrome, and electric cyan pressure. Precise and slightly severe, it pulls Dark toward overcast metal while keeping the rose identity sharp.
+<details>
+<summary>Storm</summary>
+<img src="https://raw.githubusercontent.com/xloiqa/roseveil/main/images/preview-storm.webp"/>
+</details>
 
 ## Usage
 
@@ -41,13 +55,15 @@ After installing, open the Command Palette and select **Preferences: Color Theme
 
 The product icon theme is optional and separate from the color theme. To enable it, open the Command Palette and select **Preferences: Product Icon Theme**, then choose **Roseveil Product Icons**.
 
-## Recommended Settings
+## Customization
+
+### Recommended settings
 
 ```jsonc
 {
-  // Roseveil ships semantic token rules — keep this enabled
+  // Roseveil ships semantic token rules; keep this enabled
   "editor.semanticHighlighting.enabled": true,
-  // Prevent VS Code from overriding terminal colors
+  // Preserve Roseveil's tuned terminal palette, especially in Light
   "terminal.integrated.minimumContrastRatio": 1,
   // Use the workbench color for the title bar
   "window.titleBarStyle": "custom",
@@ -58,17 +74,9 @@ The product icon theme is optional and separate from the color theme. To enable 
 }
 ```
 
-## Design
+### Roseveil settings
 
-Roseveil is built around a quiet editor, a visible rose identity, and accents that appear only when the interface needs to speak: active controls, focus rings, selections, diagnostics, and errors. Syntax stays readable and atmospheric without carrying the brand color everywhere.
-
-The mascot sets the visual temperature: a white kitsune with rose-pink flame wisps and icy cyan eyes. That contrast informs the palette language across variants: soft rose structure, cool highlights, and restrained surfaces.
-
-Each variant resolves through its own palette; Light has its own syntax scale, while Dark, Warm, and Storm share token shapes with different palettes underneath.
-
-## Settings
-
-Roseveil ships a configuration layer that applies on top of the static theme. Open **Settings** (`Ctrl+,`) and search for `roseveil` to find all options.
+Open **Settings** (`Ctrl+,`) and search for `roseveil` to find all options.
 
 | Setting | Default | Options |
 |---|---|---|
@@ -79,7 +87,7 @@ Roseveil ships a configuration layer that applies on top of the static theme. Op
 | `roseveil.boldKeywords` | `false` | boolean |
 | `roseveil.italicComments` | `true` | boolean |
 
-**Accent color** recolors badges, progress bar, focus indicators, and picker borders across all active variants — without touching button colors (those stay rose).
+**Accent color** recolors badges, progress bar, focus indicators, and picker borders across all active variants. Button colors stay rose.
 
 **Workbench mode** controls chrome layering: `flat` blends the sidebar into the editor background; `minimal` extends that to tabs, activity bar, and status bar.
 
@@ -87,7 +95,7 @@ Roseveil ships a configuration layer that applies on top of the static theme. Op
 
 All changes apply immediately without reloading.
 
-## Advanced customization
+### Custom overrides
 
 For fine-grained overrides, use VS Code's built-in settings directly. These stack on top of both the static theme and the Roseveil settings layer.
 
@@ -109,12 +117,21 @@ For fine-grained overrides, use VS Code's built-in settings directly. These stac
 }
 ```
 
+## Design
+
+Roseveil centers on a quiet editor and a visible rose identity. Accents appear only where the interface needs emphasis: active controls, focus rings, selections, diagnostics, errors. Syntax stays readable without carrying the brand color everywhere.
+
+The mascot sets the visual temperature: a white kitsune with rose-pink flame wisps and icy cyan eyes. That contrast runs through all four variants: rose warmth, cool highlights, restrained surfaces.
+
+Each variant keeps the same Roseveil character while adjusting its contrast, temperature, and syntax balance for a different reading environment.
+
 ## What's Covered
 
 - Product icons for the Activity Bar, toolbar, panels, and other VS Code UI icons
 - Editor, tabs, sidebar, panels, status bar, command center
+- IntelliSense, Outline, and breadcrumbs symbol icons aligned with syntax highlighting
 - Git decorations, diff view, merge editor
-- Terminal ANSI colors (all 16)
+- Terminal ANSI colors with tuned contrast across all variants
 - Testing and debug UI
 - Syntax highlighting for Python, JS/TS, Rust, Go, C/C++, Java, PHP, CSS, HTML, Markdown, SQL, Shell, YAML, TOML, Dockerfile, and more
 - Semantic tokens: Pylance (Python), Intelephense (PHP), rust-analyzer, gopls, jdtls, C/C++, JS/TS
