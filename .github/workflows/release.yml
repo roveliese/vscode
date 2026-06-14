@@ -1,0 +1,59 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build VSIX release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Validate package version
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+          const tag = process.env.GITHUB_REF_NAME.replace(/^v/, '');
+
+          if (pkg.version !== tag) {
+            console.error(`Tag v${tag} does not match package.json version ${pkg.version}`);
+            process.exit(1);
+          }
+          NODE
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build and verify
+        run: npm run release:prepare
+
+      - name: Package VSIX
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          npx --yes @vscode/vsce package --out "roveliese-vsc-${version}.vsix"
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          gh release create "$GITHUB_REF_NAME" \
+            "roveliese-vsc-${version}.vsix" \
+            --title "Roveliese ${version}" \
+            --notes "Download the VSIX and install it with Extensions: Install from VSIX..." \
+            --verify-tag

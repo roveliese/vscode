@@ -86,12 +86,18 @@ Open **Settings** (`Ctrl+,`) and search for `roveliese` to find all options.
 | `roveliese.italicKeywords` | `false` | boolean |
 | `roveliese.boldKeywords` | `false` | boolean |
 | `roveliese.italicComments` | `true` | boolean |
+| `roveliese.indent.enabled` | `true` | boolean |
+| `roveliese.indent.style` | `line` | `line` `background` |
+| `roveliese.indent.opacity` | per-theme | 5–100 |
+| `roveliese.indent.lineWidth` | `1` | 1–4 |
 
 **Accent color** recolors badges, progress bar, focus indicators, and picker borders across all active variants. Button colors stay rose.
 
 **Workbench mode** controls chrome layering: `flat` blends the sidebar into the editor background; `minimal` extends that to tabs, activity bar, and status bar.
 
 **Bracket colors**: `dimmed` fades brackets progressively by depth; `rainbow` cycles six palette colors across levels.
+
+**Indent guides** highlight each indentation level with palette colors matched to the active variant. `line` draws a 1 px vertical line at the left edge of each level; `background` fills the full indent region. If you have the indent-rainbow extension installed, disable it to avoid duplicate highlights.
 
 All changes apply immediately without reloading.
 

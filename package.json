@@ -3,7 +3,7 @@
     "publisher": "Roveliese",
     "displayName": "Roveliese for VS Code",
     "description": "Atmospheric rose theme for VS Code",
-    "version": "3.2.4",
+    "version": "3.3.0",
     "engines": {
         "vscode": "^1.70.0"
     },
@@ -102,6 +102,35 @@
                         "Brackets use progressively dimmed shades of the foreground.",
                         "Six distinct palette colors cycle across bracket depth levels."
                     ]
+                },
+                "roveliese.indent.enabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Highlight indentation levels with palette colors matched to the active Roveliese theme."
+                },
+                "roveliese.indent.style": {
+                    "type": "string",
+                    "default": "line",
+                    "enum": ["line", "background"],
+                    "enumDescriptions": [
+                        "Thin vertical line on the left edge of each indent level.",
+                        "Colored background fill across the full indent region."
+                    ],
+                    "description": "Visual style for indent level highlights."
+                },
+                "roveliese.indent.opacity": {
+                    "type": ["number", "null"],
+                    "default": null,
+                    "minimum": 5,
+                    "maximum": 100,
+                    "description": "Opacity percentage for indent highlights (5–100). Leave unset to use the per-theme default (line: 50, background: 16–18)."
+                },
+                "roveliese.indent.lineWidth": {
+                    "type": "number",
+                    "default": 1,
+                    "minimum": 1,
+                    "maximum": 4,
+                    "description": "Width in pixels of the indent indicator line (only applies when style is \"line\")."
                 }
             }
         }
