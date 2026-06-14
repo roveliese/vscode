@@ -94,7 +94,7 @@ exports.light = {
     green: '#1f8a65', // macros, decorators, added resources, strings
     rose: '#b06a78', // button primary background
     lavender: '#6049b3', // property, constructor, method specials
-    brightWhite: '#ffffff', // terminal bright white
+    brightWhite: '#3c3640', // terminal bright white (dark on light bg: 9:1 vs #f8f3f3; #ffffff was invisible 1.10:1)
     roseHover: '#9c5868', // button hover background
     buttonSecondaryHover: '#c1b6ba', // secondary button hover background
     roseMid: '#bd8793', // focus border
@@ -103,10 +103,10 @@ exports.light = {
     text: '#141414eb', // main foreground
     parameter: '#141414cc', // semantic parameter token
     e4base: '#141414', // must be dark (used with alpha for comments/brackets)
-    pink: '#9e94d5', // strings, CSS values, template literals
+    pink: '#8077c0', // strings, CSS values, template literals (3.59:1 on light bg)
     peachWarm: '#b8448b', // integers, units, JS functions
     brightYellow: '#c08532', // terminal bright yellow
-    peach: '#db704b', // functions, self param, method declarations
+    peach: '#c85d3a', // functions, self param, method declarations (3.76:1 on light bg)
     tabActiveFg: '#1f1a1c', // tab active foreground (dark for light bg)
     sponsor: '#c0568f', // extension sponsor icon
     roseLight: '#a05566', // icon fg, active tab border, active line number (dark rose)
@@ -114,7 +114,7 @@ exports.light = {
     brightMagenta: '#d06ba6', // terminal bright magenta
     brightRed: '#e75e78', // terminal bright red
     metaTag: '#c08532', // meta.tag
-    yellow: '#c08532', // numbers, warnings, constants, git modified
+    yellow: '#a87326', // numbers, warnings, constants, git modified (3.71:1 on light bg)
     sapphire: '#206595', // class names, CSS property names, blue links
     white: '#ffffff', // badge fg, find match fg
 };
@@ -149,7 +149,7 @@ exports.warm = {
     htmlPunct: '#a99691',
     breakpointUnverified: '#a1737a',
     subtext1: '#ad9291',
-    green: '#a8cc7c',
+    green: '#b0cc78', // warmer yellow-green vs Dark #a8cc7c (was 1:1 copy, now warm-shifted)
     rose: '#b87968',
     lavender: '#b1a0f0',
     brightWhite: '#dfd0c9',
@@ -161,7 +161,7 @@ exports.warm = {
     text: '#ead9cf',
     parameter: '#dbcac2',
     e4base: '#e3d5cc',
-    pink: '#e394dc',
+    pink: '#e89bc8', // warm rose-pink vs Dark #e394dc (was 1:1 copy, now warmer/less magenta)
     peachWarm: '#e5b883',
     brightYellow: '#e6c981',
     peach: '#e9a37d',
@@ -225,7 +225,7 @@ exports.storm = {
     peach: '#e49870',
     tabActiveFg: '#e8eeff',
     sponsor: '#d8b8f0',
-    roseLight: '#cec0e8',
+    roseLight: '#d4a8c0', // cool rose accent: brand warmth on cold base (was #cec0e8 pure lavender — too far from rose identity)
     errorRed: '#f04860',
     brightMagenta: '#e0a8f0',
     brightRed: '#f07888',

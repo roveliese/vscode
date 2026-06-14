@@ -3,4 +3,6 @@ cursor-light-color-theme.json
 CLAUDE.md
 release/
 docs/
+src/
+scripts/
 node_modules/

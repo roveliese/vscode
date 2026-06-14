@@ -3,7 +3,7 @@
     "publisher": "xloiqa",
     "displayName": "Roseveil Theme",
     "description": "Atmospheric rose theme for VS Code",
-    "version": "3.2.1",
+    "version": "3.2.2",
     "engines": {
         "vscode": "^1.70.0"
     },
@@ -116,6 +116,8 @@
         "build:product-icons": "ts-node scripts/build-product-icons.ts",
         "build:check": "tsc --noEmit",
         "build:ext": "tsc -p tsconfig.ext.json",
+        "check:all": "npm test && npm run build:check && npm run verify && npm run verify:all && npm run verify:roles",
+        "release:prepare": "npm run build && npm run build:ext && npm run check:all",
         "verify": "ts-node src/verify.ts",
         "verify:all": "ts-node src/verify-all.ts",
         "verify:roles": "ts-node src/verify-roles.ts",
