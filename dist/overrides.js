@@ -6,10 +6,10 @@ exports.buildTokenOverrides = buildTokenOverrides;
 exports.deepEqual = deepEqual;
 const palette_1 = require("./palette");
 exports.THEMES = {
-    'Roseveil Dark': palette_1.dark,
-    'Roseveil Light': palette_1.light,
-    'Roseveil Warm': palette_1.warm,
-    'Roseveil Storm': palette_1.storm,
+    'Roveliese Dark': palette_1.dark,
+    'Roveliese Light': palette_1.light,
+    'Roveliese Warm': palette_1.warm,
+    'Roveliese Storm': palette_1.storm,
 };
 exports.ACCENT_KEYS = [
     'focusBorder',

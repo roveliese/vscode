@@ -1,7 +1,7 @@
 <h3 align="center">
     <img src="https://raw.githubusercontent.com/roveliese/vscode/main/images/icon.png" width="100" alt="Logo"/><br/>
     <br/>
-    Roseveil for <a href="https://code.visualstudio.com">VS Code</a>
+    Roveliese for <a href="https://code.visualstudio.com">VS Code</a>
     <br/>
 </h3>
 
@@ -39,7 +39,7 @@
 
 ### Install from Marketplace
 
-- [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=xloiqa.roseveil-theme)
+- [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Roveliese.roveliese-vsc)
 - [Open VSX](https://open-vsx.org/extension/roveliese/vscode-theme)
 
 ### Manual installation
@@ -48,12 +48,12 @@ Download the VSIX from the [latest GitHub release](https://github.com/roveliese/
 
 After installing, open the Command Palette and select **Preferences: Color Theme**, then choose your variant:
 
-- **Roseveil Dark**
-- **Roseveil Light**
-- **Roseveil Warm**
-- **Roseveil Storm**
+- **Roveliese Dark**
+- **Roveliese Light**
+- **Roveliese Warm**
+- **Roveliese Storm**
 
-The product icon theme is optional and separate from the color theme. To enable it, open the Command Palette and select **Preferences: Product Icon Theme**, then choose **Roseveil Product Icons**.
+The product icon theme is optional and separate from the color theme. To enable it, open the Command Palette and select **Preferences: Product Icon Theme**, then choose **Roveliese Product Icons**.
 
 ## Customization
 
@@ -61,9 +61,9 @@ The product icon theme is optional and separate from the color theme. To enable 
 
 ```jsonc
 {
-  // Roseveil ships semantic token rules; keep this enabled
+  // Roveliese ships semantic token rules; keep this enabled
   "editor.semanticHighlighting.enabled": true,
-  // Preserve Roseveil's tuned terminal palette, especially in Light
+  // Preserve Roveliese's tuned terminal palette, especially in Light
   "terminal.integrated.minimumContrastRatio": 1,
   // Use the workbench color for the title bar
   "window.titleBarStyle": "custom",
@@ -74,18 +74,18 @@ The product icon theme is optional and separate from the color theme. To enable 
 }
 ```
 
-### Roseveil settings
+### Roveliese settings
 
-Open **Settings** (`Ctrl+,`) and search for `roseveil` to find all options.
+Open **Settings** (`Ctrl+,`) and search for `roveliese` to find all options.
 
 | Setting | Default | Options |
 |---|---|---|
-| `roseveil.accentColor` | `mauve` | `mauve` `rose` `lavender` `sapphire` `teal` `sky` |
-| `roseveil.workbenchMode` | `default` | `default` `flat` `minimal` |
-| `roseveil.bracketColors` | `monochromatic` | `monochromatic` `dimmed` `rainbow` |
-| `roseveil.italicKeywords` | `false` | boolean |
-| `roseveil.boldKeywords` | `false` | boolean |
-| `roseveil.italicComments` | `true` | boolean |
+| `roveliese.accentColor` | `mauve` | `mauve` `rose` `lavender` `sapphire` `teal` `sky` |
+| `roveliese.workbenchMode` | `default` | `default` `flat` `minimal` |
+| `roveliese.bracketColors` | `monochromatic` | `monochromatic` `dimmed` `rainbow` |
+| `roveliese.italicKeywords` | `false` | boolean |
+| `roveliese.boldKeywords` | `false` | boolean |
+| `roveliese.italicComments` | `true` | boolean |
 
 **Accent color** recolors badges, progress bar, focus indicators, and picker borders across all active variants. Button colors stay rose.
 
@@ -97,20 +97,20 @@ All changes apply immediately without reloading.
 
 ### Custom overrides
 
-For fine-grained overrides, use VS Code's built-in settings directly. These stack on top of both the static theme and the Roseveil settings layer.
+For fine-grained overrides, use VS Code's built-in settings directly. These stack on top of both the static theme and the Roveliese settings layer.
 
 ```jsonc
 {
   "workbench.colorCustomizations": {
-    "[Roseveil Storm]": {
+    "[Roveliese Storm]": {
       "focusBorder": "#c0b0f0"
     },
-    "[Roseveil Dark][Roseveil Storm]": {
+    "[Roveliese Dark][Roveliese Storm]": {
       "editor.selectionBackground": "#2d3060"
     }
   },
   "editor.tokenColorCustomizations": {
-    "[Roseveil Dark]": {
+    "[Roveliese Dark]": {
       "comments": "#888899"
     }
   }
@@ -119,11 +119,11 @@ For fine-grained overrides, use VS Code's built-in settings directly. These stac
 
 ## Design
 
-Roseveil centers on a quiet editor and a visible rose identity. Accents appear only where the interface needs emphasis: active controls, focus rings, selections, diagnostics, errors. Syntax stays readable without carrying the brand color everywhere.
+Roveliese centers on a quiet editor and a visible rose identity. Accents appear only where the interface needs emphasis: active controls, focus rings, selections, diagnostics, errors. Syntax stays readable without carrying the brand color everywhere.
 
 The mascot sets the visual temperature: a white kitsune with rose-pink flame wisps and icy cyan eyes. That contrast runs through all four variants: rose warmth, cool highlights, restrained surfaces.
 
-Each variant keeps the same Roseveil character while adjusting its contrast, temperature, and syntax balance for a different reading environment.
+Each variant keeps the same Roveliese character while adjusting its contrast, temperature, and syntax balance for a different reading environment.
 
 ## What's Covered
 
@@ -138,7 +138,7 @@ Each variant keeps the same Roseveil character while adjusting its contrast, tem
 
 ## Extension Support
 
-Roseveil themes the following extensions out of the box:
+Roveliese themes the following extensions out of the box:
 
 - [ErrorLens](https://github.com/usernamehw/vscode-error-lens)
 - [GitHub Pull Requests and Issues](https://github.com/microsoft/vscode-pull-request-github)

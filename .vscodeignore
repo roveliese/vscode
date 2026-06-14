@@ -16,7 +16,7 @@ docs/
 .gitignore
 tsconfig.json
 tsconfig.ext.json
-themes/roseveil.json
+themes/roveliese.json
 *.vsix
 .vscodeignore
 CLAUDE.md

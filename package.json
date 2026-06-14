@@ -1,7 +1,7 @@
 {
-    "name": "roseveil-theme",
-    "publisher": "xloiqa",
-    "displayName": "Roseveil Theme",
+    "name": "roveliese-vsc",
+    "publisher": "Roveliese",
+    "displayName": "Roveliese for VS Code",
     "description": "Atmospheric rose theme for VS Code",
     "version": "3.2.3",
     "engines": {
@@ -17,37 +17,37 @@
     "contributes": {
         "productIconThemes": [
             {
-                "id": "roseveil-product-icons",
-                "label": "Roseveil Product Icons",
-                "path": "./producticons/roseveil-product-icon-theme.json"
+                "id": "roveliese-product-icons",
+                "label": "Roveliese Product Icons",
+                "path": "./producticons/roveliese-product-icon-theme.json"
             }
         ],
         "themes": [
             {
-                "label": "Roseveil Dark",
+                "label": "Roveliese Dark",
                 "uiTheme": "vs-dark",
-                "path": "./themes/roseveil-dark.json"
+                "path": "./themes/roveliese-dark.json"
             },
             {
-                "label": "Roseveil Light",
+                "label": "Roveliese Light",
                 "uiTheme": "vs-light",
-                "path": "./themes/roseveil-light.json"
+                "path": "./themes/roveliese-light.json"
             },
             {
-                "label": "Roseveil Warm",
+                "label": "Roveliese Warm",
                 "uiTheme": "vs-dark",
-                "path": "./themes/roseveil-warm.json"
+                "path": "./themes/roveliese-warm.json"
             },
             {
-                "label": "Roseveil Storm",
+                "label": "Roveliese Storm",
                 "uiTheme": "vs-dark",
-                "path": "./themes/roseveil-storm.json"
+                "path": "./themes/roveliese-storm.json"
             }
         ],
         "configuration": {
-            "title": "Roseveil",
+            "title": "Roveliese",
             "properties": {
-                "roseveil.accentColor": {
+                "roveliese.accentColor": {
                     "type": "string",
                     "default": "mauve",
                     "enum": [
@@ -60,22 +60,22 @@
                     ],
                     "description": "Primary accent color for badges, progress bar, and focus indicators."
                 },
-                "roseveil.italicKeywords": {
+                "roveliese.italicKeywords": {
                     "type": "boolean",
                     "default": false,
                     "description": "Render keywords in italic."
                 },
-                "roseveil.boldKeywords": {
+                "roveliese.boldKeywords": {
                     "type": "boolean",
                     "default": false,
                     "description": "Render keywords in bold."
                 },
-                "roseveil.italicComments": {
+                "roveliese.italicComments": {
                     "type": "boolean",
                     "default": true,
-                    "description": "Render comments in italic (on by default — matches Roseveil baseline)."
+                    "description": "Render comments in italic (on by default — matches Roveliese baseline)."
                 },
-                "roseveil.workbenchMode": {
+                "roveliese.workbenchMode": {
                     "type": "string",
                     "default": "default",
                     "enum": [
@@ -89,7 +89,7 @@
                         "Single-shade: sidebar, tabs, and panels all use the editor background."
                     ]
                 },
-                "roseveil.bracketColors": {
+                "roveliese.bracketColors": {
                     "type": "string",
                     "default": "monochromatic",
                     "enum": [

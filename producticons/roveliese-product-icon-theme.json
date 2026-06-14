@@ -1,10 +1,10 @@
 {
   "fonts": [
     {
-      "id": "roseveil-product-icons",
+      "id": "roveliese-product-icons",
       "src": [
         {
-          "path": "./roseveil-product-icons.ttf",
+          "path": "./roveliese-product-icons.ttf",
           "format": "truetype"
         }
       ],
