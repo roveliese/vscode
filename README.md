@@ -1,5 +1,5 @@
 <h3 align="center">
-    <img src="https://raw.githubusercontent.com/xloiqa/roseveil/main/images/icon.png" width="100" alt="Logo"/><br/>
+    <img src="https://raw.githubusercontent.com/roveliese/vscode/main/images/icon.png" width="100" alt="Logo"/><br/>
     <br/>
     Roseveil for <a href="https://code.visualstudio.com">VS Code</a>
     <br/>
@@ -10,29 +10,29 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/xloiqa/roseveil/main/images/preview.webp"/>
+  <img src="https://raw.githubusercontent.com/roveliese/vscode/main/images/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>Dark</summary>
-<img src="https://raw.githubusercontent.com/xloiqa/roseveil/main/images/preview-dark.webp"/>
+<img src="https://raw.githubusercontent.com/roveliese/vscode/main/images/preview-dark.webp"/>
 </details>
 
 <details>
 <summary>Light</summary>
-<img src="https://raw.githubusercontent.com/xloiqa/roseveil/main/images/preview-light.webp"/>
+<img src="https://raw.githubusercontent.com/roveliese/vscode/main/images/preview-light.webp"/>
 </details>
 
 <details>
 <summary>Warm</summary>
-<img src="https://raw.githubusercontent.com/xloiqa/roseveil/main/images/preview-warm.webp"/>
+<img src="https://raw.githubusercontent.com/roveliese/vscode/main/images/preview-warm.webp"/>
 </details>
 
 <details>
 <summary>Storm</summary>
-<img src="https://raw.githubusercontent.com/xloiqa/roseveil/main/images/preview-storm.webp"/>
+<img src="https://raw.githubusercontent.com/roveliese/vscode/main/images/preview-storm.webp"/>
 </details>
 
 ## Usage
@@ -40,11 +40,11 @@
 ### Install from Marketplace
 
 - [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=xloiqa.roseveil-theme)
-- [Open VSX](https://open-vsx.org/extension/xloiqa/roseveil-theme)
+- [Open VSX](https://open-vsx.org/extension/roveliese/vscode-theme)
 
 ### Manual installation
 
-Download the VSIX from the [latest GitHub release](https://github.com/xloiqa/roseveil/releases). Open the Command Palette and select **Extensions: Install from VSIX...**, then select the file you just downloaded.
+Download the VSIX from the [latest GitHub release](https://github.com/roveliese/vscode/releases). Open the Command Palette and select **Extensions: Install from VSIX...**, then select the file you just downloaded.
 
 After installing, open the Command Palette and select **Preferences: Color Theme**, then choose your variant:
 
@@ -146,10 +146,10 @@ Roseveil themes the following extensions out of the box:
 
 ## Support
 
-Found an issue or have a suggestion? Open an issue on [GitHub](https://github.com/xloiqa/roseveil/issues) or reach out via the Marketplace Q&A.
+Found an issue or have a suggestion? Open an issue on [GitHub](https://github.com/roveliese/vscode/issues) or reach out via the Marketplace Q&A.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/xloiqa/roseveil/main/images/footer.png" width="600" alt=""/>
+<img src="https://raw.githubusercontent.com/roveliese/vscode/main/images/footer.png" width="600" alt=""/>
 </p>
 
 <p align="center">
@@ -157,5 +157,5 @@ Copyright &copy; 2026-present <a href="https://github.com/xloiqa">xloiqa</a>
 </p>
 
 <p align="center">
-<a href="https://github.com/xloiqa/roseveil/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=f4e9e8&colorA=2b2b44&colorB=c75e7a"/></a>
+<a href="https://github.com/roveliese/vscode/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=f4e9e8&colorA=2b2b44&colorB=c75e7a"/></a>
 </p>

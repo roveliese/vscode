@@ -39,12 +39,20 @@ exports.deactivate = deactivate;
 const vscode = __importStar(require("vscode"));
 const overrides_1 = require("./overrides");
 Object.defineProperty(exports, "THEMES", { enumerable: true, get: function () { return overrides_1.THEMES; } });
+const ROVELIESE_URL = 'https://marketplace.visualstudio.com/items?itemName=roveliese.roveliese-vsc';
 function activate(context) {
+    showMigrationNotice();
     applyOverrides();
     context.subscriptions.push(vscode.workspace.onDidChangeConfiguration(e => {
         if (e.affectsConfiguration('roseveil'))
             applyOverrides();
     }));
+}
+async function showMigrationNotice() {
+    const action = await vscode.window.showInformationMessage('Roseveil has been renamed to Roveliese for VS Code. Install the new extension to continue receiving updates.', 'Install Roveliese', 'Later');
+    if (action === 'Install Roveliese') {
+        vscode.env.openExternal(vscode.Uri.parse(ROVELIESE_URL));
+    }
 }
 function deactivate() { }
 function applyOverrides() {

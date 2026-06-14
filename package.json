@@ -3,7 +3,7 @@
     "publisher": "xloiqa",
     "displayName": "Roseveil Theme",
     "description": "Atmospheric rose theme for VS Code",
-    "version": "3.2.2",
+    "version": "3.2.3",
     "engines": {
         "vscode": "^1.70.0"
     },
@@ -109,7 +109,7 @@
     "icon": "images/icon.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/xloiqa/roseveil"
+        "url": "https://github.com/roveliese/vscode"
     },
     "scripts": {
         "build": "ts-node src/build.ts",
