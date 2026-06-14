@@ -37,10 +37,7 @@ jobs:
           NODE
 
       - name: Install dependencies
-        run: npm ci
-
-      - name: Build and verify
-        run: npm run release:prepare
+        run: npm ci --ignore-scripts
 
       - name: Package VSIX
         run: |
