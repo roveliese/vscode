@@ -40,7 +40,7 @@
 ### Install from Marketplace
 
 - [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Roveliese.roveliese-vsc)
-- [Open VSX](https://open-vsx.org/extension/roveliese/vscode-theme)
+- [Open VSX](https://open-vsx.org/extension/Roveliese/roveliese-vsc)
 
 ### Manual installation
 
