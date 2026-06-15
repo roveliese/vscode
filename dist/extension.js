@@ -86,22 +86,22 @@ const INDENT_GUIDE_PRESETS = {
     'Roveliese Dark': {
         colors: ['rose', 'peachWarm', 'yellow', 'green', 'teal', 'lavender'],
         backgroundOpacity: 16,
-        lineOpacity: 50,
+        lineOpacity: 60,
     },
     'Roveliese Light': {
         colors: ['rose', 'peach', 'yellow', 'green', 'sky', 'lavender'],
         backgroundOpacity: 18,
-        lineOpacity: 50,
+        lineOpacity: 60,
     },
     'Roveliese Warm': {
         colors: ['rose', 'peach', 'yellow', 'green', 'sky', 'pink'],
         backgroundOpacity: 17,
-        lineOpacity: 50,
+        lineOpacity: 60,
     },
     'Roveliese Storm': {
         colors: ['mauve', 'sapphire', 'sky', 'teal', 'lavender', 'roseLight'],
         backgroundOpacity: 18,
-        lineOpacity: 50,
+        lineOpacity: 60,
     },
 };
 const FALLBACK_THEME = 'Roveliese Dark';
