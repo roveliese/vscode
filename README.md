@@ -139,8 +139,8 @@ Each variant keeps the same Roveliese character while adjusting its contrast, te
 - Git decorations, diff view, merge editor
 - Terminal ANSI colors with tuned contrast across all variants
 - Testing and debug UI
-- Syntax highlighting for Python, JS/TS, Rust, Go, C/C++, Java, PHP, CSS, HTML, Markdown, SQL, Shell, YAML, TOML, Dockerfile, and more
-- Semantic tokens: Pylance (Python), Intelephense (PHP), rust-analyzer, gopls, jdtls, C/C++, JS/TS
+- Syntax highlighting for Python, JS/TS, Rust, Go, C/C++, Java, PHP, C#, Ruby, Kotlin, Swift, CSS, HTML, Markdown, SQL, Shell, PowerShell, YAML, TOML, JSON, XML, Dockerfile, GraphQL, Protocol Buffers, Terraform/HCL, and more
+- Semantic tokens: Pylance (Python), Intelephense (PHP), rust-analyzer, gopls, jdtls (Java), C# Dev Kit, C/C++, JS/TS
 
 ## Extension Support
 

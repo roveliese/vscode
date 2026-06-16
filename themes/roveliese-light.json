@@ -775,7 +775,32 @@
         "variable.readonly:go": "#b3003f",
         "annotation": "#1f8a65",
         "annotation.declaration": "#1f8a65",
-        "annotationMember": "#c85d3a"
+        "annotationMember": "#c85d3a",
+        "class:csharp": "#206595",
+        "struct:csharp": "#206595",
+        "interface:csharp": "#206595",
+        "enum:csharp": "#a87326",
+        "enumMember:csharp": "#a87326",
+        "delegate:csharp": "#206595",
+        "namespace:csharp": "#141414cc",
+        "method.static:csharp": {
+            "foreground": "#b8448b",
+            "fontStyle": "italic"
+        },
+        "method.extension:csharp": {
+            "foreground": "#b8448b",
+            "fontStyle": "italic"
+        },
+        "field.static:csharp": "#a87326",
+        "field.readonly:csharp": "#206595",
+        "event:csharp": "#6049b3",
+        "typeParameter:csharp": "#b3003f",
+        "preprocessorKeyword:csharp": "#1f8a65",
+        "xmlDocCommentName:csharp": "#cdc4c6",
+        "xmlDocCommentAttributeName:csharp": "#7c7479",
+        "xmlDocCommentText:csharp": {
+            "foreground": "#14141480"
+        }
     },
     "tokenColors": [
         {
@@ -2663,6 +2688,966 @@
             }
         },
         {
+            "name": "C#: Primitive Types",
+            "scope": "keyword.type.cs",
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "C#: Interface",
+            "scope": "entity.name.type.interface.cs",
+            "settings": {
+                "foreground": "#206595"
+            }
+        },
+        {
+            "name": "C#: Enum Name",
+            "scope": "entity.name.type.enum.cs",
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "C#: Delegate Name",
+            "scope": "entity.name.type.delegate.cs",
+            "settings": {
+                "foreground": "#206595"
+            }
+        },
+        {
+            "name": "C#: Attribute Name",
+            "scope": [
+                "entity.name.type.attribute.cs",
+                "support.type.attribute.cs"
+            ],
+            "settings": {
+                "foreground": "#1f8a65"
+            }
+        },
+        {
+            "name": "C#: Attribute Brackets",
+            "scope": [
+                "punctuation.definition.attribute.begin.cs",
+                "punctuation.definition.attribute.end.cs"
+            ],
+            "settings": {
+                "foreground": "#cdc4c6"
+            }
+        },
+        {
+            "name": "C#: Interpolation Braces",
+            "scope": [
+                "punctuation.definition.interpolation.begin.cs",
+                "punctuation.definition.interpolation.end.cs"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "C#: Verbatim String",
+            "scope": "string.quoted.double.cs.verbatim",
+            "settings": {
+                "foreground": "#8077c0"
+            }
+        },
+        {
+            "name": "C#: Boolean / Null",
+            "scope": [
+                "constant.language.boolean.cs",
+                "constant.language.null.cs"
+            ],
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "C#: XML Doc Tag",
+            "scope": "comment.block.documentation.cs entity.name.tag",
+            "settings": {
+                "foreground": "#cdc4c6"
+            }
+        },
+        {
+            "name": "C#: XML Doc Attribute",
+            "scope": "comment.block.documentation.cs entity.other.attribute-name",
+            "settings": {
+                "foreground": "#7c7479"
+            }
+        },
+        {
+            "name": "C#: Comments",
+            "scope": [
+                "comment.line.double-slash.cs",
+                "comment.block.cs",
+                "comment.block.documentation.cs"
+            ],
+            "settings": {
+                "foreground": "#14141480",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "XML: Tag Name",
+            "scope": [
+                "entity.name.tag.xml",
+                "entity.name.tag.localname.xml"
+            ],
+            "settings": {
+                "foreground": "#206595"
+            }
+        },
+        {
+            "name": "XML: Tag Punctuation",
+            "scope": [
+                "punctuation.definition.tag.begin.xml",
+                "punctuation.definition.tag.end.xml"
+            ],
+            "settings": {
+                "foreground": "#141414ad"
+            }
+        },
+        {
+            "name": "XML: Namespace Prefix",
+            "scope": "entity.name.tag.namespace.xml",
+            "settings": {
+                "foreground": "#c85d3a"
+            }
+        },
+        {
+            "name": "XML: Namespace Separator",
+            "scope": "punctuation.separator.namespace.xml",
+            "settings": {
+                "foreground": "#cdc4c6"
+            }
+        },
+        {
+            "name": "XML: Attribute Name",
+            "scope": [
+                "entity.other.attribute-name.xml",
+                "entity.other.attribute-name.localname.xml"
+            ],
+            "settings": {
+                "foreground": "#6049b3"
+            }
+        },
+        {
+            "name": "XML: Attribute Namespace",
+            "scope": "entity.other.attribute-name.namespace.xml",
+            "settings": {
+                "foreground": "#c85d3a"
+            }
+        },
+        {
+            "name": "XML: Attribute Value",
+            "scope": [
+                "string.quoted.double.xml",
+                "string.quoted.single.xml"
+            ],
+            "settings": {
+                "foreground": "#8077c0"
+            }
+        },
+        {
+            "name": "XML: Processing Instruction",
+            "scope": "meta.tag.preprocessor.xml entity.name.tag",
+            "settings": {
+                "foreground": "#1f8a65"
+            }
+        },
+        {
+            "name": "XML: PI Attribute",
+            "scope": "meta.tag.preprocessor.xml entity.other.attribute-name",
+            "settings": {
+                "foreground": "#6e656b"
+            }
+        },
+        {
+            "name": "XML: DOCTYPE Keyword",
+            "scope": "keyword.other.doctype",
+            "settings": {
+                "foreground": "#1f8a65"
+            }
+        },
+        {
+            "name": "XML: DOCTYPE Name",
+            "scope": [
+                "variable.language.documentroot.xml",
+                "entity.name.tag.sgml.doctype.xml",
+                "entity.name.tag.doctype.xml"
+            ],
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "XML: Entity Reference",
+            "scope": [
+                "constant.character.entity.xml",
+                "punctuation.definition.constant.xml",
+                "punctuation.definition.constant.end.xml"
+            ],
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "XML: CDATA Content",
+            "scope": "string.unquoted.cdata.xml",
+            "settings": {
+                "foreground": "#8077c0"
+            }
+        },
+        {
+            "name": "XML: CDATA Punctuation",
+            "scope": [
+                "punctuation.definition.string.begin.xml",
+                "punctuation.definition.string.end.xml"
+            ],
+            "settings": {
+                "foreground": "#cdc4c6"
+            }
+        },
+        {
+            "name": "XML: Comments",
+            "scope": "comment.block.xml",
+            "settings": {
+                "foreground": "#14141480",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Ruby: Class Name",
+            "scope": [
+                "entity.name.type.class.ruby",
+                "entity.name.class.ruby"
+            ],
+            "settings": {
+                "foreground": "#206595"
+            }
+        },
+        {
+            "name": "Ruby: Module Name",
+            "scope": "entity.name.type.module.ruby",
+            "settings": {
+                "foreground": "#206595"
+            }
+        },
+        {
+            "name": "Ruby: Method Name",
+            "scope": [
+                "entity.name.function.ruby",
+                "meta.definition.method.ruby entity.name.function"
+            ],
+            "settings": {
+                "foreground": "#c85d3a"
+            }
+        },
+        {
+            "name": "Ruby: Kernel Functions",
+            "scope": [
+                "support.function.kernel.ruby",
+                "support.function.ruby"
+            ],
+            "settings": {
+                "foreground": "#c85d3a"
+            }
+        },
+        {
+            "name": "Ruby: Instance Variable",
+            "scope": [
+                "variable.other.readwrite.instance.ruby",
+                "punctuation.definition.variable.ruby"
+            ],
+            "settings": {
+                "foreground": "#6049b3"
+            }
+        },
+        {
+            "name": "Ruby: Class Variable",
+            "scope": "variable.other.readwrite.class.ruby",
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "Ruby: Global Variable",
+            "scope": "variable.other.readwrite.global.ruby",
+            "settings": {
+                "foreground": "#cf2d56"
+            }
+        },
+        {
+            "name": "Ruby: Block Parameter",
+            "scope": "variable.other.block.ruby",
+            "settings": {
+                "foreground": "#141414eb"
+            }
+        },
+        {
+            "name": "Ruby: Constant",
+            "scope": [
+                "variable.other.constant.ruby",
+                "constant.other.ruby"
+            ],
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "Ruby: Language Constants",
+            "scope": "constant.language.ruby",
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "Ruby: Symbol",
+            "scope": [
+                "constant.language.symbol.ruby",
+                "string.other.symbol.ruby",
+                "constant.other.symbol.ruby"
+            ],
+            "settings": {
+                "foreground": "#141414eb"
+            }
+        },
+        {
+            "name": "Ruby: String Interpolation Markers",
+            "scope": [
+                "punctuation.section.embedded.begin.ruby",
+                "punctuation.section.embedded.end.ruby"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "Ruby: Here Document",
+            "scope": [
+                "string.unquoted.heredoc.ruby",
+                "punctuation.definition.string.begin.ruby",
+                "punctuation.definition.string.end.ruby"
+            ],
+            "settings": {
+                "foreground": "#8077c0"
+            }
+        },
+        {
+            "name": "Ruby: Regexp",
+            "scope": "string.regexp.classic.ruby",
+            "settings": {
+                "foreground": "#b8448b"
+            }
+        },
+        {
+            "name": "Ruby: Pseudo-methods",
+            "scope": [
+                "keyword.control.pseudo-method.ruby",
+                "keyword.other.special-method.ruby"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "Ruby: Comments",
+            "scope": [
+                "comment.line.number-sign.ruby",
+                "comment.block.ruby"
+            ],
+            "settings": {
+                "foreground": "#14141480",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Kotlin: Storage Type",
+            "scope": [
+                "storage.type.kotlin",
+                "storage.modifier.kotlin"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "Kotlin: Class / Interface Name",
+            "scope": [
+                "entity.name.type.class.kotlin",
+                "entity.name.class.kotlin"
+            ],
+            "settings": {
+                "foreground": "#206595"
+            }
+        },
+        {
+            "name": "Kotlin: Annotation",
+            "scope": [
+                "entity.name.annotation.kotlin",
+                "meta.annotation.kotlin",
+                "storage.type.annotation.kotlin"
+            ],
+            "settings": {
+                "foreground": "#1f8a65"
+            }
+        },
+        {
+            "name": "Kotlin: Function Name",
+            "scope": "entity.name.function.kotlin",
+            "settings": {
+                "foreground": "#c85d3a"
+            }
+        },
+        {
+            "name": "Kotlin: Property",
+            "scope": "variable.other.property.kotlin",
+            "settings": {
+                "foreground": "#6049b3"
+            }
+        },
+        {
+            "name": "Kotlin: String Template Markers",
+            "scope": [
+                "punctuation.definition.template-expression.begin.kotlin",
+                "punctuation.definition.template-expression.end.kotlin",
+                "string.template.begin.kotlin",
+                "string.template.end.kotlin"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "Kotlin: Null / Boolean",
+            "scope": [
+                "constant.language.null.kotlin",
+                "constant.language.boolean.kotlin"
+            ],
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "Kotlin: Label",
+            "scope": "entity.name.label.kotlin",
+            "settings": {
+                "foreground": "#6049b3"
+            }
+        },
+        {
+            "name": "Kotlin: Comments",
+            "scope": [
+                "comment.line.double-slash.kotlin",
+                "comment.block.kotlin",
+                "comment.block.documentation.kotlin"
+            ],
+            "settings": {
+                "foreground": "#14141480",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "PowerShell: Control Keywords",
+            "scope": [
+                "keyword.control.powershell",
+                "keyword.other.powershell"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "PowerShell: Function Name",
+            "scope": "entity.name.function.powershell",
+            "settings": {
+                "foreground": "#c85d3a"
+            }
+        },
+        {
+            "name": "PowerShell: Built-in Cmdlets",
+            "scope": [
+                "support.function.powershell",
+                "support.function.writeline.powershell"
+            ],
+            "settings": {
+                "foreground": "#c85d3a"
+            }
+        },
+        {
+            "name": "PowerShell: Variable",
+            "scope": [
+                "variable.other.readwrite.powershell",
+                "variable.other.member.powershell"
+            ],
+            "settings": {
+                "foreground": "#6049b3"
+            }
+        },
+        {
+            "name": "PowerShell: Variable Sigil",
+            "scope": "punctuation.definition.variable.powershell",
+            "settings": {
+                "foreground": "#6049b3"
+            }
+        },
+        {
+            "name": "PowerShell: Special Variables",
+            "scope": "support.constant.variable.powershell",
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "PowerShell: Boolean / Null",
+            "scope": [
+                "constant.language.boolean.true.powershell",
+                "constant.language.boolean.false.powershell",
+                "constant.language.null.powershell",
+                "constant.language.powershell"
+            ],
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "PowerShell: Parameter",
+            "scope": [
+                "variable.parameter.powershell",
+                "entity.name.variable.parameter.powershell"
+            ],
+            "settings": {
+                "foreground": "#6049b3"
+            }
+        },
+        {
+            "name": "PowerShell: Type Cast",
+            "scope": [
+                "entity.name.type.powershell",
+                "storage.type.powershell"
+            ],
+            "settings": {
+                "foreground": "#206595"
+            }
+        },
+        {
+            "name": "PowerShell: Type Brackets",
+            "scope": [
+                "punctuation.definition.typecasting.begin.powershell",
+                "punctuation.definition.typecasting.end.powershell"
+            ],
+            "settings": {
+                "foreground": "#cdc4c6"
+            }
+        },
+        {
+            "name": "PowerShell: Comparison / Logical Operators",
+            "scope": [
+                "keyword.operator.comparison.powershell",
+                "keyword.operator.logical.powershell"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "PowerShell: String Interpolation Markers",
+            "scope": [
+                "punctuation.definition.string.subexpression.begin.powershell",
+                "punctuation.definition.string.subexpression.end.powershell"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "PowerShell: Comments",
+            "scope": [
+                "comment.line.number-sign.powershell",
+                "comment.block.powershell"
+            ],
+            "settings": {
+                "foreground": "#14141480",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Terraform: Block Keywords",
+            "scope": [
+                "keyword.other.terraform",
+                "keyword.other.hcl",
+                "storage.type.function.terraform"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "Terraform: Block Type Labels",
+            "scope": [
+                "entity.name.function.terraform",
+                "entity.name.resource.type.terraform",
+                "entity.name.section.terraform"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "Terraform: Resource / Module Name",
+            "scope": [
+                "entity.name.resource.name.terraform",
+                "entity.name.label.terraform"
+            ],
+            "settings": {
+                "foreground": "#206595"
+            }
+        },
+        {
+            "name": "Terraform: Reference (var./local./module.)",
+            "scope": [
+                "variable.reference.terraform",
+                "variable.other.readwrite.terraform",
+                "variable.other.terraform"
+            ],
+            "settings": {
+                "foreground": "#6049b3"
+            }
+        },
+        {
+            "name": "Terraform: Built-in Functions",
+            "scope": [
+                "support.function.builtin.terraform",
+                "support.function.builtin.hcl"
+            ],
+            "settings": {
+                "foreground": "#c85d3a"
+            }
+        },
+        {
+            "name": "Terraform: Template Expression Markers",
+            "scope": [
+                "punctuation.section.template.begin.terraform",
+                "punctuation.section.template.end.terraform",
+                "punctuation.section.interpolation.begin.hcl",
+                "punctuation.section.interpolation.end.hcl"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "Terraform: Numbers",
+            "scope": [
+                "constant.numeric.terraform",
+                "constant.numeric.hcl"
+            ],
+            "settings": {
+                "foreground": "#b8448b"
+            }
+        },
+        {
+            "name": "Terraform: Boolean / Null",
+            "scope": [
+                "constant.language.boolean.terraform",
+                "constant.language.null.terraform",
+                "constant.language.boolean.hcl",
+                "constant.language.null.hcl"
+            ],
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "Terraform: Comments",
+            "scope": [
+                "comment.line.number-sign.terraform",
+                "comment.line.double-slash.terraform",
+                "comment.block.terraform",
+                "comment.line.number-sign.hcl",
+                "comment.line.double-slash.hcl",
+                "comment.block.hcl"
+            ],
+            "settings": {
+                "foreground": "#14141480",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "GraphQL: Type Keywords",
+            "scope": [
+                "keyword.type.graphql",
+                "keyword.fragment.graphql",
+                "keyword.operation.graphql"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "GraphQL: Type Name",
+            "scope": "entity.name.type.graphql",
+            "settings": {
+                "foreground": "#206595"
+            }
+        },
+        {
+            "name": "GraphQL: Built-in Scalar Types",
+            "scope": [
+                "support.type.scalar.graphql",
+                "support.type.builtin.graphql"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "GraphQL: Operation / Fragment Name",
+            "scope": [
+                "entity.name.function.graphql",
+                "entity.name.fragment.graphql"
+            ],
+            "settings": {
+                "foreground": "#c85d3a"
+            }
+        },
+        {
+            "name": "GraphQL: Field Name",
+            "scope": [
+                "entity.other.attribute-name.graphql",
+                "string.unquoted.alias.graphql"
+            ],
+            "settings": {
+                "foreground": "#6049b3"
+            }
+        },
+        {
+            "name": "GraphQL: Variable",
+            "scope": [
+                "variable.graphql",
+                "variable.other.graphql"
+            ],
+            "settings": {
+                "foreground": "#6049b3"
+            }
+        },
+        {
+            "name": "GraphQL: Directive",
+            "scope": [
+                "keyword.directive.graphql",
+                "entity.name.directive.graphql"
+            ],
+            "settings": {
+                "foreground": "#1f8a65"
+            }
+        },
+        {
+            "name": "GraphQL: Boolean / Null / Enum Value",
+            "scope": [
+                "constant.language.boolean.graphql",
+                "constant.language.null.graphql",
+                "constant.other.enum.graphql"
+            ],
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "GraphQL: Comments",
+            "scope": [
+                "comment.line.number-sign.graphql",
+                "comment.block.graphql"
+            ],
+            "settings": {
+                "foreground": "#14141480",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Swift: Storage",
+            "scope": [
+                "storage.type.swift",
+                "storage.modifier.swift"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "Swift: Type Names",
+            "scope": [
+                "entity.name.type.swift",
+                "entity.name.type.class.swift",
+                "entity.name.type.struct.swift",
+                "entity.name.type.enum.swift"
+            ],
+            "settings": {
+                "foreground": "#206595"
+            }
+        },
+        {
+            "name": "Swift: Protocol Name",
+            "scope": "entity.name.type.protocol.swift",
+            "settings": {
+                "foreground": "#206595"
+            }
+        },
+        {
+            "name": "Swift: Standard Library Types",
+            "scope": "support.type.swift",
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "Swift: Attribute",
+            "scope": [
+                "meta.attribute.swift",
+                "entity.name.type.attribute.swift",
+                "storage.type.attribute.swift"
+            ],
+            "settings": {
+                "foreground": "#1f8a65"
+            }
+        },
+        {
+            "name": "Swift: Function Name",
+            "scope": "entity.name.function.swift",
+            "settings": {
+                "foreground": "#c85d3a"
+            }
+        },
+        {
+            "name": "Swift: Support Functions",
+            "scope": "support.function.swift",
+            "settings": {
+                "foreground": "#c85d3a"
+            }
+        },
+        {
+            "name": "Swift: Capture List Variable",
+            "scope": "variable.other.capturedvariable.swift",
+            "settings": {
+                "foreground": "#141414eb"
+            }
+        },
+        {
+            "name": "Swift: String Interpolation Markers",
+            "scope": [
+                "punctuation.section.embedded.begin.swift",
+                "punctuation.section.embedded.end.swift"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "Swift: Language Constants",
+            "scope": "constant.language.swift",
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "Swift: Comments",
+            "scope": [
+                "comment.line.double-slash.swift",
+                "comment.block.swift",
+                "comment.block.documentation.swift"
+            ],
+            "settings": {
+                "foreground": "#14141480",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Proto: Block Keywords",
+            "scope": [
+                "keyword.other.proto",
+                "keyword.other.definition.proto"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "Proto: Field Rules",
+            "scope": "storage.type.proto",
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "Proto: Scalar Types",
+            "scope": [
+                "storage.type.numeric.proto",
+                "support.type.proto"
+            ],
+            "settings": {
+                "foreground": "#b3003f"
+            }
+        },
+        {
+            "name": "Proto: Message Name",
+            "scope": "entity.name.type.message.proto",
+            "settings": {
+                "foreground": "#206595"
+            }
+        },
+        {
+            "name": "Proto: Enum Name",
+            "scope": "entity.name.type.enum.proto",
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "Proto: Service / RPC Name",
+            "scope": [
+                "entity.name.function.proto",
+                "entity.name.type.service.proto"
+            ],
+            "settings": {
+                "foreground": "#c85d3a"
+            }
+        },
+        {
+            "name": "Proto: Field Name",
+            "scope": [
+                "variable.other.field.proto",
+                "variable.other.proto"
+            ],
+            "settings": {
+                "foreground": "#6049b3"
+            }
+        },
+        {
+            "name": "Proto: Numbers",
+            "scope": "constant.numeric.proto",
+            "settings": {
+                "foreground": "#b8448b"
+            }
+        },
+        {
+            "name": "Proto: Boolean",
+            "scope": "constant.language.boolean.proto",
+            "settings": {
+                "foreground": "#a87326"
+            }
+        },
+        {
+            "name": "Proto: Comments",
+            "scope": [
+                "comment.line.double-slash.proto",
+                "comment.block.proto"
+            ],
+            "settings": {
+                "foreground": "#14141480",
+                "fontStyle": "italic"
+            }
+        },
+        {
             "name": "Unison: Punctuation",
             "scope": "punctuation.definition.delayed.unison,punctuation.definition.list.begin.unison,punctuation.definition.list.end.unison,punctuation.definition.ability.begin.unison,punctuation.definition.ability.end.unison,punctuation.operator.assignment.as.unison,punctuation.separator.pipe.unison,punctuation.separator.delimiter.unison,punctuation.definition.hash.unison",
             "settings": {
@@ -2705,13 +3690,6 @@
             ],
             "settings": {
                 "foreground": "#b3003f"
-            }
-        },
-        {
-            "name": "Ruby: Symbol",
-            "scope": "constant.language.symbol.ruby",
-            "settings": {
-                "foreground": "#141414eb"
             }
         },
         {
@@ -2856,11 +3834,8 @@
             }
         },
         {
-            "name": "Swift/VB ASP: Types",
-            "scope": [
-                "support.type.swift",
-                "support.type.vb.asp"
-            ],
+            "name": "VB ASP: Types",
+            "scope": "support.type.vb.asp",
             "settings": {
                 "foreground": "#c85d3a"
             }
