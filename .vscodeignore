@@ -18,6 +18,7 @@ tsconfig.json
 tsconfig.ext.json
 themes/roveliese.json
 *.vsix
+*.log
 .vscodeignore
 CLAUDE.md
 *.md
