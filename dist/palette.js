@@ -18,7 +18,7 @@ exports.dark = {
     selectionBg: '#2d2d42',
     overlay0: '#30304a',
     surface2: '#313244',
-    findRange: '#3e5767',
+    findRange: '#2b3c45',
     overlay1: '#45475a',
     overlay2: '#585b70',
     scrollActiveDark: '#6c7086',

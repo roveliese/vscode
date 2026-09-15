@@ -3,7 +3,7 @@
     "publisher": "Roveliese",
     "displayName": "Roveliese for VS Code",
     "description": "Atmospheric rose theme for VS Code",
-    "version": "3.7.5",
+    "version": "3.7.6",
     "engines": {
         "vscode": "^1.70.0"
     },
@@ -145,12 +145,15 @@
         "build:product-icons": "ts-node scripts/build-product-icons.ts",
         "build:check": "tsc --noEmit",
         "build:ext": "tsc -p tsconfig.ext.json",
-        "check:all": "npm test && npm run build:check && npm run verify && npm run verify:all && npm run verify:roles",
+        "check:all": "npm test && npm run build:check && npm run verify && npm run verify:all && npm run verify:roles && npm run verify:generated",
         "release:prepare": "npm run build && npm run build:ext && npm run check:all",
         "verify": "ts-node src/verify.ts",
         "verify:all": "ts-node src/verify-all.ts",
         "verify:roles": "ts-node src/verify-roles.ts",
-        "test": "node --require ts-node/register --test src/test/overrides.test.ts src/test/roles.test.ts"
+        "test": "node --require ts-node/register --test src/test/overrides.test.ts src/test/roles.test.ts src/test/colorMath.test.ts src/test/themeDiff.test.ts src/test/verifiers.test.ts",
+        "verify:generated": "ts-node src/verify-generated.ts",
+        "report:themes": "ts-node src/report-theme-changes.ts",
+        "verify:vsix": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File release/verify-vsix.ps1"
     },
     "devDependencies": {
         "@tabler/icons": "^3.44.0",
