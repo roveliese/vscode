@@ -69,6 +69,7 @@
                 "roveliese.accentColor": {
                     "type": "string",
                     "default": "mauve",
+                    "order": 10,
                     "enum": [
                         "mauve",
                         "rose",
@@ -77,26 +78,38 @@
                         "teal",
                         "sky"
                     ],
-                    "description": "Primary accent color for badges, progress bar, and focus indicators."
+                    "enumItemLabels": [
+                        "Mauve — balanced default",
+                        "Rose — warmer",
+                        "Lavender — cooler",
+                        "Sapphire — crisp blue",
+                        "Teal — calm contrast",
+                        "Sky — brighter blue"
+                    ],
+                    "markdownDescription": "**Start here.** Changes badges, the progress bar, focus indicators, and picker borders. `mauve` is the balanced default; buttons stay rose."
                 },
                 "roveliese.italicKeywords": {
                     "type": "boolean",
                     "default": false,
-                    "description": "Render keywords in italic."
+                    "order": 50,
+                    "markdownDescription": "Italicizes language keywords such as `return`, `class`, and `function`. Try it with #roveliese.boldKeywords# for stronger landmarks in dense code."
                 },
                 "roveliese.boldKeywords": {
                     "type": "boolean",
                     "default": false,
-                    "description": "Render keywords in bold."
+                    "order": 40,
+                    "markdownDescription": "Bolds language keywords such as `return`, `class`, and `function`. A simple way to make code structure easier to scan."
                 },
                 "roveliese.italicComments": {
                     "type": "boolean",
                     "default": true,
-                    "description": "Render comments in italic (on by default — matches Roveliese baseline)."
+                    "order": 60,
+                    "markdownDescription": "Renders comments in italic. Enabled by default as part of the intended Roveliese appearance."
                 },
                 "roveliese.workbenchMode": {
                     "type": "string",
                     "default": "default",
+                    "order": 20,
                     "enum": [
                         "default",
                         "flat",
@@ -106,11 +119,18 @@
                         "Full three-shade chrome: sidebar, tabs, and editor have distinct backgrounds.",
                         "Reduced contrast: sidebar background matches the editor background.",
                         "Single-shade: sidebar, tabs, and panels all use the editor background."
-                    ]
+                    ],
+                    "enumItemLabels": [
+                        "Default — layered chrome",
+                        "Flat — quieter sidebar",
+                        "Minimal — editor-first"
+                    ],
+                    "markdownDescription": "Controls how distinct the VS Code chrome is from the editor. Keep `default` for the complete theme; try `minimal` when you want the editor to recede into the background."
                 },
                 "roveliese.bracketColors": {
                     "type": "string",
                     "default": "monochromatic",
+                    "order": 70,
                     "enum": [
                         "monochromatic",
                         "dimmed",
@@ -120,46 +140,65 @@
                         "All brackets use the foreground color (current default).",
                         "Brackets use progressively dimmed shades of the foreground.",
                         "Six distinct palette colors cycle across bracket depth levels."
-                    ]
+                    ],
+                    "enumItemLabels": [
+                        "Monochromatic — quiet default",
+                        "Dimmed — soft depth cues",
+                        "Rainbow — strongest depth cues"
+                    ],
+                    "markdownDescription": "Choose how nested brackets communicate depth. `monochromatic` is quiet; `rainbow` is the easiest to scan in deeply nested code."
                 },
                 "roveliese.navigationContrast": {
                     "type": "string",
                     "default": "calm",
+                    "order": 30,
                     "enum": ["calm", "clear"],
                     "enumDescriptions": [
                         "Quiet navigation chrome matching the default Roveliese atmosphere.",
                         "More visible scrollbars, tree and indent guides, and ignored Git decorations."
                     ],
-                    "description": "Control the visibility of navigation details without changing syntax highlighting."
+                    "enumItemLabels": [
+                        "Calm — intended default",
+                        "Clear — easier navigation"
+                    ],
+                    "markdownDescription": "Controls scrollbars, tree and indent guides, and ignored Git decorations without changing syntax highlighting. Choose `clear` if navigation details are too subtle."
                 },
                 "roveliese.indent.enabled": {
                     "type": "boolean",
                     "default": true,
-                    "description": "Highlight indentation levels with palette colors matched to the active Roveliese theme."
+                    "order": 80,
+                    "markdownDescription": "Highlights indentation levels with colors matched to the active Roveliese theme. Enabled by default; disable only if another indent-guide extension already does this."
                 },
                 "roveliese.indent.style": {
                     "type": "string",
                     "default": "line",
+                    "order": 90,
                     "enum": ["line", "background"],
                     "enumDescriptions": [
                         "Thin vertical line on the left edge of each indent level.",
                         "Colored background fill across the full indent region."
                     ],
-                    "description": "Visual style for indent level highlights."
+                    "enumItemLabels": [
+                        "Line — subtle default",
+                        "Background — stronger structure"
+                    ],
+                    "markdownDescription": "Choose `line` for a quiet 1 px guide, or `background` for stronger structural cues. See #roveliese.indent.opacity# to tune the strength."
                 },
                 "roveliese.indent.opacity": {
                     "type": ["number", "null"],
                     "default": null,
                     "minimum": 5,
                     "maximum": 100,
-                    "description": "Opacity percentage for indent highlights (5–100). Leave unset to use the per-theme default (Light line: 32, dark lines: 60, background: 16–18)."
+                    "order": 100,
+                    "markdownDescription": "Opacity for indent highlights (`5`–`100`). Leave empty for the tuned per-theme default. Example: `16` keeps the `background` style intentionally subtle."
                 },
                 "roveliese.indent.lineWidth": {
                     "type": "number",
                     "default": 1,
                     "minimum": 1,
                     "maximum": 4,
-                    "description": "Width in pixels of the indent indicator line (only applies when style is \"line\")."
+                    "order": 110,
+                    "markdownDescription": "Width in pixels for the `line` style. Keep `1` for the intended subtle guide; try `2` when guides need to be easier to see."
                 }
             }
         }

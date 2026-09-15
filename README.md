@@ -37,11 +37,13 @@
 
 Download the VSIX from the [latest GitHub release](https://github.com/roveliese/vscode/releases). Open the Command Palette and select **Extensions: Install from VSIX...**, then select the file you just downloaded.
 
-After installing, open the Command Palette and select **Preferences: Color Theme**, then choose your variant:
+After installing, open the Command Palette (`Ctrl+Shift+P`) and select **Roveliese: Select Theme**, then choose your variant:
 
 - **Roveliese Dark**
 - **Roveliese Light**
 - **Roveliese Storm**
+
+You can also use VS Code's standard **Preferences: Color Theme** picker.
 
 The product icon theme is optional and separate from the color theme. To enable it, open the Command Palette and select **Preferences: Product Icon Theme**, then choose **Roveliese Product Icons**.
 
@@ -66,12 +68,13 @@ The product icon theme is optional and separate from the color theme. To enable 
 
 ### Roveliese settings
 
-Open **Settings** (`Ctrl+,`) and search for `roveliese` to find all options.
+Open the Command Palette and select **Roveliese: Configure Theme** to jump straight to the settings. You can also open **Settings** (`Ctrl+,`) and search for `roveliese`.
 
 | Setting | Default | Options |
 |---|---|---|
 | `roveliese.accentColor` | `mauve` | `mauve` `rose` `lavender` `sapphire` `teal` `sky` |
 | `roveliese.workbenchMode` | `default` | `default` `flat` `minimal` |
+| `roveliese.navigationContrast` | `calm` | `calm` `clear` |
 | `roveliese.bracketColors` | `monochromatic` | `monochromatic` `dimmed` `rainbow` |
 | `roveliese.italicKeywords` | `false` | boolean |
 | `roveliese.boldKeywords` | `false` | boolean |
@@ -84,6 +87,8 @@ Open **Settings** (`Ctrl+,`) and search for `roveliese` to find all options.
 **Accent color** recolors badges, progress bar, focus indicators, and picker borders across all active variants. Button colors stay rose.
 
 **Workbench mode** controls chrome layering: `flat` blends the sidebar into the editor background; `minimal` extends that to tabs, activity bar, and status bar.
+
+**Navigation contrast** keeps the default chrome calm. Choose `clear` for more visible scrollbars, tree and indent guides, and ignored Git decorations without changing syntax highlighting.
 
 **Bracket colors**: `dimmed` fades brackets progressively by depth; `rainbow` cycles six palette colors across levels.
 
