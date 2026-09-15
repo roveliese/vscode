@@ -46,13 +46,24 @@ async function activate(context) {
     applyOverrides();
     warnIfIndentRainbowConflict();
     new IndentGuideController(context);
-    context.subscriptions.push(vscode.workspace.onDidChangeConfiguration(e => {
+    context.subscriptions.push(vscode.commands.registerCommand('roveliese.configureTheme', () => vscode.commands.executeCommand('workbench.action.openSettings', '@ext:roveliese.roveliese-vsc')), vscode.commands.registerCommand('roveliese.selectTheme', selectTheme), vscode.workspace.onDidChangeConfiguration(e => {
         if (e.affectsConfiguration('roveliese'))
             applyOverrides();
         if (e.affectsConfiguration('workbench.colorTheme')) {
             migrateRetiredWarmTheme().catch(error => console.error('Roveliese theme migration failed:', error));
         }
     }));
+}
+async function selectTheme() {
+    const descriptions = {
+        'Roveliese Dark': 'Deep mocha with rose warmth',
+        'Roveliese Light': 'Warm paper with dark rose accents',
+        'Roveliese Storm': 'Cool, precise blue-black atmosphere',
+    };
+    const choice = await vscode.window.showQuickPick(Object.keys(overrides_1.THEMES).map(label => ({ label, description: descriptions[label] })), { placeHolder: 'Choose a Roveliese theme' });
+    if (choice) {
+        await vscode.workspace.getConfiguration('workbench').update('colorTheme', choice.label, vscode.ConfigurationTarget.Global);
+    }
 }
 async function migrateRetiredWarmTheme() {
     const rootConfig = vscode.workspace.getConfiguration('workbench');
@@ -89,6 +100,7 @@ function applyOverrides() {
         italicComments: cfg.get('italicComments', true),
         workbenchMode: cfg.get('workbenchMode', 'default'),
         bracketColors: cfg.get('bracketColors', 'monochromatic'),
+        navigationContrast: cfg.get('navigationContrast', 'calm'),
     };
     const globalCfg = vscode.workspace.getConfiguration();
     const target = vscode.ConfigurationTarget.Global;

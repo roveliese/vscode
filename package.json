@@ -3,7 +3,7 @@
     "publisher": "Roveliese",
     "displayName": "Roveliese for VS Code",
     "description": "Atmospheric rose theme for VS Code",
-    "version": "3.7.6",
+    "version": "3.8.0",
     "engines": {
         "vscode": "^1.70.0"
     },
@@ -15,6 +15,30 @@
         "onStartupFinished"
     ],
     "contributes": {
+        "commands": [
+            {
+                "command": "roveliese.selectTheme",
+                "title": "Select Theme",
+                "category": "Roveliese"
+            },
+            {
+                "command": "roveliese.configureTheme",
+                "title": "Configure Theme",
+                "category": "Roveliese"
+            }
+        ],
+        "menus": {
+            "commandPalette": [
+                {
+                    "command": "roveliese.selectTheme",
+                    "group": "roveliese@1"
+                },
+                {
+                    "command": "roveliese.configureTheme",
+                    "group": "roveliese@2"
+                }
+            ]
+        },
         "productIconThemes": [
             {
                 "id": "roveliese-product-icons",
@@ -30,11 +54,6 @@
             },
             {
                 "label": "Roveliese Light",
-                "uiTheme": "vs-light",
-                "path": "./themes/roveliese-light.json"
-            },
-            {
-                "label": "Roveliese Warm",
                 "uiTheme": "vs-light",
                 "path": "./themes/roveliese-light.json"
             },
@@ -102,6 +121,16 @@
                         "Brackets use progressively dimmed shades of the foreground.",
                         "Six distinct palette colors cycle across bracket depth levels."
                     ]
+                },
+                "roveliese.navigationContrast": {
+                    "type": "string",
+                    "default": "calm",
+                    "enum": ["calm", "clear"],
+                    "enumDescriptions": [
+                        "Quiet navigation chrome matching the default Roveliese atmosphere.",
+                        "More visible scrollbars, tree and indent guides, and ignored Git decorations."
+                    ],
+                    "description": "Control the visibility of navigation details without changing syntax highlighting."
                 },
                 "roveliese.indent.enabled": {
                     "type": "boolean",

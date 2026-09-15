@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MANAGED_TOKEN_SCOPES = exports.ALL_MANAGED_COLOR_KEYS = exports.BRACKET_KEYS = exports.WORKBENCH_MINIMAL_EXTRA_KEYS = exports.WORKBENCH_FLAT_KEYS = exports.ACCENT_KEYS = exports.THEMES = void 0;
+exports.MANAGED_TOKEN_SCOPES = exports.ALL_MANAGED_COLOR_KEYS = exports.NAVIGATION_CLEAR_KEYS = exports.BRACKET_KEYS = exports.WORKBENCH_MINIMAL_EXTRA_KEYS = exports.WORKBENCH_FLAT_KEYS = exports.ACCENT_KEYS = exports.THEMES = void 0;
 exports.buildColorOverrides = buildColorOverrides;
 exports.buildTokenOverrides = buildTokenOverrides;
 exports.deepEqual = deepEqual;
@@ -42,11 +42,22 @@ exports.BRACKET_KEYS = [
     'editorBracketHighlight.foreground5',
     'editorBracketHighlight.foreground6',
 ];
+exports.NAVIGATION_CLEAR_KEYS = [
+    'scrollbarSlider.background',
+    'scrollbarSlider.hoverBackground',
+    'scrollbarSlider.activeBackground',
+    'tree.indentGuidesStroke',
+    'tree.inactiveIndentGuidesStroke',
+    'editorIndentGuide.background',
+    'editorIndentGuide.activeBackground',
+    'gitDecoration.ignoredResourceForeground',
+];
 exports.ALL_MANAGED_COLOR_KEYS = [
     ...exports.ACCENT_KEYS,
     ...exports.WORKBENCH_FLAT_KEYS,
     ...exports.WORKBENCH_MINIMAL_EXTRA_KEYS,
     ...exports.BRACKET_KEYS,
+    ...exports.NAVIGATION_CLEAR_KEYS,
 ];
 exports.MANAGED_TOKEN_SCOPES = ['keyword', 'comment'];
 function buildColorOverrides(existing, settings) {
@@ -83,6 +94,9 @@ function buildColorOverrides(existing, settings) {
             for (let i = 0; i < 6; i++) {
                 block[exports.BRACKET_KEYS[i]] = bracketValues[i];
             }
+        }
+        if (settings.navigationContrast === 'clear') {
+            Object.assign(block, resolveClearNavigationColors(p));
         }
         const stripped = stripUndefined(block);
         if (Object.keys(stripped).length > 0) {
@@ -137,6 +151,22 @@ function resolveBracketColors(mode, p) {
         case 'rainbow':
             return [p.teal, p.pink, p.lavender, p.yellow, p.peach, p.sapphire];
     }
+}
+function resolveClearNavigationColors(p) {
+    const isLight = p === palette_1.light;
+    return {
+        'scrollbarSlider.background': withAlpha(isLight ? p.subtext0 : p.overlay1, isLight ? 'b8' : '80'),
+        'scrollbarSlider.hoverBackground': withAlpha(isLight ? p.subtext0 : p.overlay2, isLight ? 'd0' : 'a0'),
+        'scrollbarSlider.activeBackground': withAlpha(isLight ? p.subtext0 : p.scrollActiveDark, isLight ? 'e8' : 'c0'),
+        'tree.indentGuidesStroke': isLight ? p.sky : withAlpha(p.sky, '80'),
+        'tree.inactiveIndentGuidesStroke': isLight ? withAlpha(p.subtext0, '80') : p.overlay2,
+        'editorIndentGuide.background': isLight ? withAlpha(p.subtext0, '66') : p.overlay2,
+        'editorIndentGuide.activeBackground': isLight ? withAlpha(p.subtext0, '88') : p.scrollActiveDark,
+        'gitDecoration.ignoredResourceForeground': p.subtext0,
+    };
+}
+function withAlpha(hex, alpha) {
+    return hex + alpha;
 }
 function buildFontStyle(italic, bold) {
     const parts = [];
