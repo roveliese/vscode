@@ -166,7 +166,7 @@
         "editorHoverWidget.foreground": "#c6d2f0",
         "editorIndentGuide.activeBackground": "#40508c",
         "editorIndentGuide.background": "#334478",
-        "editorGhostText.foreground": "#7a88a880",
+        "editorGhostText.foreground": "#7a88a8a1",
         "editorGhostText.background": "#00000000",
         "editorGhostText.border": "#00000000",
         "editorInlayHint.foreground": "#576fb9",
@@ -799,7 +799,7 @@
         "xmlDocCommentName:csharp": "#5068b4",
         "xmlDocCommentAttributeName:csharp": "#7a88a8",
         "xmlDocCommentText:csharp": {
-            "foreground": "#dce4f47a"
+            "foreground": "#dce4f482"
         }
     },
     "tokenColors": [
@@ -1160,7 +1160,7 @@
             "scope": "comment, punctuation.definition.comment, comment.line.double-slash, comment.block.documentation",
             "settings": {
                 "fontStyle": "italic",
-                "foreground": "#dce4f47a"
+                "foreground": "#dce4f482"
             }
         },
         {
@@ -2294,7 +2294,7 @@
             "name": "Markdown: Blockquote",
             "scope": "markup.quote.markdown",
             "settings": {
-                "foreground": "#dce4f47a"
+                "foreground": "#dce4f482"
             }
         },
         {
@@ -2412,7 +2412,7 @@
             "name": "YAML: Comments",
             "scope": "comment.line.number-sign.yaml",
             "settings": {
-                "foreground": "#dce4f47a",
+                "foreground": "#dce4f482",
                 "fontStyle": "italic"
             }
         },
@@ -2469,7 +2469,7 @@
             "name": "TOML: Comments",
             "scope": "comment.line.number-sign.toml",
             "settings": {
-                "foreground": "#dce4f47a",
+                "foreground": "#dce4f482",
                 "fontStyle": "italic"
             }
         },
@@ -2515,7 +2515,7 @@
             "name": "Dockerfile: Comments",
             "scope": "comment.line.number-sign.dockerfile",
             "settings": {
-                "foreground": "#dce4f47a",
+                "foreground": "#dce4f482",
                 "fontStyle": "italic"
             }
         },
@@ -2605,7 +2605,7 @@
                 "comment.block.sql"
             ],
             "settings": {
-                "foreground": "#dce4f47a",
+                "foreground": "#dce4f482",
                 "fontStyle": "italic"
             }
         },
@@ -2683,7 +2683,7 @@
             "name": "Shell: Comments",
             "scope": "comment.line.number-sign.shell",
             "settings": {
-                "foreground": "#dce4f47a",
+                "foreground": "#dce4f482",
                 "fontStyle": "italic"
             }
         },
@@ -2784,7 +2784,7 @@
                 "comment.block.documentation.cs"
             ],
             "settings": {
-                "foreground": "#dce4f47a",
+                "foreground": "#dce4f482",
                 "fontStyle": "italic"
             }
         },
@@ -2913,7 +2913,7 @@
             "name": "XML: Comments",
             "scope": "comment.block.xml",
             "settings": {
-                "foreground": "#dce4f47a",
+                "foreground": "#dce4f482",
                 "fontStyle": "italic"
             }
         },
@@ -3058,7 +3058,7 @@
                 "comment.block.ruby"
             ],
             "settings": {
-                "foreground": "#dce4f47a",
+                "foreground": "#dce4f482",
                 "fontStyle": "italic"
             }
         },
@@ -3144,7 +3144,7 @@
                 "comment.block.documentation.kotlin"
             ],
             "settings": {
-                "foreground": "#dce4f47a",
+                "foreground": "#dce4f482",
                 "fontStyle": "italic"
             }
         },
@@ -3268,7 +3268,7 @@
                 "comment.block.powershell"
             ],
             "settings": {
-                "foreground": "#dce4f47a",
+                "foreground": "#dce4f482",
                 "fontStyle": "italic"
             }
         },
@@ -3370,7 +3370,7 @@
                 "comment.block.hcl"
             ],
             "settings": {
-                "foreground": "#dce4f47a",
+                "foreground": "#dce4f482",
                 "fontStyle": "italic"
             }
         },
@@ -3460,7 +3460,7 @@
                 "comment.block.graphql"
             ],
             "settings": {
-                "foreground": "#dce4f47a",
+                "foreground": "#dce4f482",
                 "fontStyle": "italic"
             }
         },
@@ -3557,7 +3557,7 @@
                 "comment.block.documentation.swift"
             ],
             "settings": {
-                "foreground": "#dce4f47a",
+                "foreground": "#dce4f482",
                 "fontStyle": "italic"
             }
         },
@@ -3643,7 +3643,7 @@
                 "comment.block.proto"
             ],
             "settings": {
-                "foreground": "#dce4f47a",
+                "foreground": "#dce4f482",
                 "fontStyle": "italic"
             }
         },
@@ -3909,7 +3909,7 @@
                 "beginning.punctuation.definition.list.markdown.xi"
             ],
             "settings": {
-                "foreground": "#dce4f47a"
+                "foreground": "#dce4f482"
             }
         },
         {
@@ -3954,7 +3954,7 @@
                 "punctuation.definition.tag.xi"
             ],
             "settings": {
-                "foreground": "#dce4f47a"
+                "foreground": "#dce4f482"
             }
         },
         {

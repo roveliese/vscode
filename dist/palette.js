@@ -77,7 +77,7 @@ exports.light = {
     selectionBg: '#d2c4cc', // rose selection preserves syntax contrast
     overlay0: '#c1b5b9', // sash hover, text separator, panel/sidebar border
     surface2: '#d3c8c9', // editorGutter comment, stickyScroll hover, suggest selected
-    findRange: '#c1ced0', // editor find range highlight (faint teal)
+    findRange: '#b5c5c7', // editor find range highlight (soft teal)
     overlay1: '#dacfd0', // checkbox, listFilter, tree inactive, settings inputs
     overlay2: '#b9acb1', // various UI separators, scrollbars, borders, indent guide
     scrollActiveDark: '#8a8490', // scrollbar slider active (alpha base only)
