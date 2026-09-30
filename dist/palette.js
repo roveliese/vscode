@@ -61,7 +61,7 @@ exports.dark = {
 };
 exports.light = {
     // Backgrounds — lightest to darkest (inverted polarity vs dark)
-    crust: '#e9e2e0', // inputs / quickInput (lightest floating surface)
+    crust: '#f4eeeb', // inputs / quickInput: clear lift above light chrome
     darker: '#d1c6c8', // unfocused inactive tab (recedes)
     mantle: '#d8cecf', // sidebar, activity bar, panel, title bar, tabs header
     darkest: '#2a2330', // shadow + dark contrast-fg on accent backgrounds
@@ -72,7 +72,7 @@ exports.light = {
     lineHighlight: '#d7cecd', // visible without becoming a stripe
     inactiveSelection: '#d3c9cc', // subdued inactive selection on warm paper
     termBlack: '#141414eb', // terminal ansi black (must stay dark)
-    surface0: '#dacfd0', // breadcrumb bg, editorCursor bg, menu, peek title
+    surface0: '#eee5e2', // raised cards and menus above light chrome
     listActive: '#bfb1b8', // list active/focus, statusBarItem active, quickInputList focus
     selectionBg: '#d2c4cc', // rose selection preserves syntax contrast
     overlay0: '#c1b5b9', // sash hover, text separator, panel/sidebar border
