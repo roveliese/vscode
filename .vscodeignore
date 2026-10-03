@@ -21,3 +21,4 @@ themes/roveliese.json
 CLAUDE.md
 *.md
 !README.md
+.gitattributes
