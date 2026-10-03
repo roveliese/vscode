@@ -6,7 +6,13 @@
 </h3>
 
 <p align="center">
-  A quiet, atmospheric theme family built around a rose identity.
+  Three atmospheric themes with rose accents, readable syntax, and quiet interfaces.
+</p>
+
+<p align="center">
+  <a href="https://marketplace.visualstudio.com/items?itemName=Roveliese.roveliese-vsc">Visual Studio Marketplace</a>
+  &nbsp;&middot;&nbsp;
+  <a href="https://open-vsx.org/extension/Roveliese/roveliese-vsc">Open VSX</a>
 </p>
 
 ## Previews
@@ -28,11 +34,6 @@
 
 ## Usage
 
-### Install from Marketplace
-
-- [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Roveliese.roveliese-vsc)
-- [Open VSX](https://open-vsx.org/extension/Roveliese/roveliese-vsc)
-
 ### Manual installation
 
 Download the VSIX from the [latest GitHub release](https://github.com/roveliese/vscode/releases). Open the Command Palette and select **Extensions: Install from VSIX...**, then select the file you just downloaded.
@@ -45,11 +46,45 @@ After installing, open the Command Palette (`Ctrl+Shift+P`) and select **Rovelie
 
 You can also use VS Code's standard **Preferences: Color Theme** picker.
 
-The product icon theme is optional and separate from the color theme. To enable it, open the Command Palette and select **Preferences: Product Icon Theme**, then choose **Roveliese Product Icons**.
+## Product Icons
+
+**Roveliese Product Icons** is an optional theme for interface icons in the Activity Bar, toolbars, and panels. You can enable it independently of the color theme.
+
+Open the Command Palette and select **Preferences: Product Icon Theme**, then choose **Roveliese Product Icons**.
 
 ## Customization
 
-### Recommended settings
+Open the Command Palette and select **Roveliese: Configure Theme**, or open **Settings** (`Ctrl+,`) and search for `roveliese`. All changes apply immediately without reloading.
+
+- **Choose an accent.** Recolor badges, the progress bar, focus indicators, and picker borders. Buttons stay rose.
+- **Simplify the interface.** `flat` blends the sidebar into the editor background; `minimal` also blends tabs, the Activity Bar, and the status bar.
+- **Make navigation clearer.** Choose `clear` for more visible scrollbars, tree and indent guides, and ignored Git decorations without changing syntax highlighting.
+- **Adjust typography.** Toggle italic or bold keywords and italic comments.
+- **Tune brackets and indentation.** Keep brackets monochromatic, fade them by depth with `dimmed`, or use six colors with `rainbow`. Indent guides support colored lines or backgrounds, with adjustable opacity and line width.
+
+Indent guides use palette colors matched to the active variant. If you use the indent-rainbow extension, disable it to avoid duplicate highlights.
+
+<details>
+<summary>All Roveliese settings and defaults</summary>
+
+| Setting | Default | Options |
+|---|---|---|
+| `roveliese.accentColor` | `mauve` | `mauve` `rose` `lavender` `sapphire` `teal` `sky` |
+| `roveliese.workbenchMode` | `default` | `default` `flat` `minimal` |
+| `roveliese.navigationContrast` | `calm` | `calm` `clear` |
+| `roveliese.bracketColors` | `monochromatic` | `monochromatic` `dimmed` `rainbow` |
+| `roveliese.italicKeywords` | `false` | boolean |
+| `roveliese.boldKeywords` | `false` | boolean |
+| `roveliese.italicComments` | `true` | boolean |
+| `roveliese.indent.enabled` | `true` | boolean |
+| `roveliese.indent.style` | `line` | `line` `background` |
+| `roveliese.indent.opacity` | per-theme | 5–100 |
+| `roveliese.indent.lineWidth` | `1` | 1–4 |
+
+</details>
+
+<details>
+<summary>Recommended VS Code settings</summary>
 
 ```jsonc
 {
@@ -66,37 +101,10 @@ The product icon theme is optional and separate from the color theme. To enable 
 }
 ```
 
-### Roveliese settings
+</details>
 
-Open the Command Palette and select **Roveliese: Configure Theme** to jump straight to the settings. You can also open **Settings** (`Ctrl+,`) and search for `roveliese`.
-
-| Setting | Default | Options |
-|---|---|---|
-| `roveliese.accentColor` | `mauve` | `mauve` `rose` `lavender` `sapphire` `teal` `sky` |
-| `roveliese.workbenchMode` | `default` | `default` `flat` `minimal` |
-| `roveliese.navigationContrast` | `calm` | `calm` `clear` |
-| `roveliese.bracketColors` | `monochromatic` | `monochromatic` `dimmed` `rainbow` |
-| `roveliese.italicKeywords` | `false` | boolean |
-| `roveliese.boldKeywords` | `false` | boolean |
-| `roveliese.italicComments` | `true` | boolean |
-| `roveliese.indent.enabled` | `true` | boolean |
-| `roveliese.indent.style` | `line` | `line` `background` |
-| `roveliese.indent.opacity` | per-theme | 5–100 |
-| `roveliese.indent.lineWidth` | `1` | 1–4 |
-
-**Accent color** recolors badges, progress bar, focus indicators, and picker borders across all active variants. Button colors stay rose.
-
-**Workbench mode** controls chrome layering: `flat` blends the sidebar into the editor background; `minimal` extends that to tabs, activity bar, and status bar.
-
-**Navigation contrast** keeps the default chrome calm. Choose `clear` for more visible scrollbars, tree and indent guides, and ignored Git decorations without changing syntax highlighting.
-
-**Bracket colors**: `dimmed` fades brackets progressively by depth; `rainbow` cycles six palette colors across levels.
-
-**Indent guides** highlight each indentation level with palette colors matched to the active variant. `line` draws a 1 px vertical line at the left edge of each level; `background` fills the full indent region. If you have the indent-rainbow extension installed, disable it to avoid duplicate highlights.
-
-All changes apply immediately without reloading.
-
-### Custom overrides
+<details>
+<summary>Custom color and syntax overrides</summary>
 
 For fine-grained overrides, use VS Code's built-in settings directly. These stack on top of both the static theme and the Roveliese settings layer.
 
@@ -118,6 +126,8 @@ For fine-grained overrides, use VS Code's built-in settings directly. These stac
 }
 ```
 
+</details>
+
 ## Design
 
 Roveliese centers on a quiet editor and a visible rose identity. Accents appear only where the interface needs emphasis: active controls, focus rings, selections, diagnostics, errors. Syntax stays readable without carrying the brand color everywhere.
@@ -128,14 +138,19 @@ Each variant keeps the same Roveliese character while adjusting its contrast, te
 
 ## What's Covered
 
-- Product icons for the Activity Bar, toolbar, panels, and other VS Code UI icons
-- Editor, tabs, sidebar, panels, status bar, command center
-- IntelliSense, Outline, and breadcrumbs symbol icons aligned with syntax highlighting
-- Git decorations, diff view, merge editor
-- Terminal ANSI colors with tuned contrast across all variants
-- Testing and debug UI
-- Syntax highlighting for Python, JS/TS, Rust, Go, C/C++, Java, PHP, C#, Ruby, Kotlin, Swift, CSS, HTML, Markdown, SQL, Shell, PowerShell, YAML, TOML, JSON, XML, Dockerfile, GraphQL, Protocol Buffers, Terraform/HCL, and more
-- Semantic tokens: Pylance (Python), Intelephense (PHP), rust-analyzer, gopls, jdtls (Java), C# Dev Kit, C/C++, JS/TS
+- Workbench surfaces, navigation, Git diffs, testing, and debug UI
+- Terminal colors tuned for all three variants
+- Syntax highlighting and semantic tokens for Python, JS/TS, Rust, Go, C/C++, and more
+- IntelliSense, Outline, and breadcrumb symbol colors aligned with syntax highlighting
+
+<details>
+<summary>Full language and semantic token coverage</summary>
+
+**Syntax highlighting:** Python, JS/TS, Rust, Go, C/C++, Java, PHP, C#, Ruby, Kotlin, Swift, CSS, HTML, Markdown, SQL, Shell, PowerShell, YAML, TOML, JSON, XML, Dockerfile, GraphQL, Protocol Buffers, Terraform/HCL, and more.
+
+**Semantic tokens:** Pylance (Python), Intelephense (PHP), rust-analyzer, gopls, jdtls (Java), C# Dev Kit, C/C++, and JS/TS.
+
+</details>
 
 ## Extension Support
 
