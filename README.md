@@ -122,7 +122,7 @@ For fine-grained overrides, use VS Code's built-in settings directly. These stac
 
 Roveliese centers on a quiet editor and a visible rose identity. Accents appear only where the interface needs emphasis: active controls, focus rings, selections, diagnostics, errors. Syntax stays readable without carrying the brand color everywhere.
 
-The mascot sets the visual temperature: a white kitsune with rose-pink flame wisps and icy cyan eyes. That contrast runs through all three variants: rose warmth, cool highlights, restrained surfaces.
+All three variants share rose warmth, cool highlights, and restrained surfaces.
 
 Each variant keeps the same Roveliese character while adjusting its contrast, temperature, and syntax balance for a different reading environment.
 
