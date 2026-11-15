@@ -32,6 +32,9 @@ exports.WORKBENCH_MINIMAL_EXTRA_KEYS = [
     'tab.inactiveBackground',
     'tab.activeBackground',
     'activityBar.background',
+    'modernEditorTab.inactiveBackground',
+    'modernActivityBar.background',
+    'modernActivityBar.inactiveBackground',
     'statusBar.background',
 ];
 exports.BRACKET_KEYS = [
@@ -50,6 +53,8 @@ exports.NAVIGATION_CLEAR_KEYS = [
     'tree.inactiveIndentGuidesStroke',
     'editorIndentGuide.background',
     'editorIndentGuide.activeBackground',
+    'editorIndentGuide.background1',
+    'editorIndentGuide.activeBackground1',
     'gitDecoration.ignoredResourceForeground',
 ];
 exports.ALL_MANAGED_COLOR_KEYS = [
@@ -154,14 +159,18 @@ function resolveBracketColors(mode, p) {
 }
 function resolveClearNavigationColors(p) {
     const isLight = p === palette_1.light;
+    const indentGuide = isLight ? withAlpha(p.subtext0, '66') : p.overlay2;
+    const activeIndentGuide = isLight ? withAlpha(p.subtext0, '88') : p.scrollActiveDark;
     return {
         'scrollbarSlider.background': withAlpha(isLight ? p.subtext0 : p.overlay1, isLight ? 'b8' : '80'),
         'scrollbarSlider.hoverBackground': withAlpha(isLight ? p.subtext0 : p.overlay2, isLight ? 'd0' : 'a0'),
         'scrollbarSlider.activeBackground': withAlpha(isLight ? p.subtext0 : p.scrollActiveDark, isLight ? 'e8' : 'c0'),
         'tree.indentGuidesStroke': isLight ? p.sky : withAlpha(p.sky, '80'),
         'tree.inactiveIndentGuidesStroke': isLight ? withAlpha(p.subtext0, '80') : p.overlay2,
-        'editorIndentGuide.background': isLight ? withAlpha(p.subtext0, '66') : p.overlay2,
-        'editorIndentGuide.activeBackground': isLight ? withAlpha(p.subtext0, '88') : p.scrollActiveDark,
+        'editorIndentGuide.background': indentGuide,
+        'editorIndentGuide.activeBackground': activeIndentGuide,
+        'editorIndentGuide.background1': indentGuide,
+        'editorIndentGuide.activeBackground1': activeIndentGuide,
         'gitDecoration.ignoredResourceForeground': p.subtext0,
     };
 }
